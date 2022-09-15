@@ -20,10 +20,24 @@ body>#app>.container{
    align-items: center;
    justify-content: center
 }
+
+#btn{
+        border-radius: 10px;
+    }
+
+  .border{
+    border-radius: 10px;
+  }
+
+  div#container{
+    padding-top: 15rem;
+  }
+
+
 </style>
 @endsection
 @section('content')
-<div class="container">
+<div class="container" id="container">
     <div class="col-lg-5 col-md-6 col-sm-10 col-xs-12">
         <div class="card rounded-0 shadow text-reset">
             <div class="card-header">
@@ -67,7 +81,7 @@ body>#app>.container{
                         <div class="mb-3{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
                             <label for="password-confirm" class="control-label">Confirm Password</label>
                             <div class="">
-                                <input id="password-confirm" type="password" class="form-control rounded-0" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
 
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
@@ -79,7 +93,7 @@ body>#app>.container{
 
                         <div class="mb-3">
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary bg-gradient rounded-0">
+                                <button type="submit" class="btn btn-primary bg-gradient" id="btn">
                                     Reset Password
                                 </button>
                             </div>
