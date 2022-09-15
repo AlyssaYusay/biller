@@ -5,6 +5,7 @@
 	<style>
 		body{
 			font-family:Raleway,sans-serif;
+      background-color: white;
 		}
 		.right{
 			float:right;

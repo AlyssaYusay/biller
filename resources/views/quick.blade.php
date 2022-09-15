@@ -122,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
 										<div class="payment-info">
 											<h3>Paytm</h3>
-											<h4>Already Have A Paytm Account?</h4>
+											<h4>Already Have A Payment Account?</h4>
 											<div class="login-tab">
 												<div class="user-login">
 													<h2>Login</h2>

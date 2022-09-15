@@ -11,18 +11,32 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+     />
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script
+            src="https://kit.fontawesome.com/656d817613.js"
+            crossorigin="anonymous"></script>
+             <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
         <!-- Styles -->
         <style>
            html, body {
-                background-color: #000;
-                color: #dddddd;
+                background-color: white;
+                background-image: url("../images/manpaid.png");
+                color: black;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 700;
                 height: 100vh;
+                background-size: cover;
                 margin: 0;
             }
 
@@ -44,6 +58,8 @@
                 position: absolute;
                 right: 10px;
                 top: 18px;
+                padding-right: 8rem;
+                padding-top: 1rem;
             }
 
             .content {
@@ -55,7 +71,7 @@
             }
 
             .links > a {
-                color: #cdcdcd;
+                color: black;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -71,16 +87,30 @@
                 font-size: 16px;
                 font-weight: bold;
             }
+
+            /* media query */
+            @media screen and (max-width: 480px){
+                .top-right{
+                padding-left: 10rem;
+                padding-right:0;
+                }
+
+                .m-b-md {
+                font-size: 3rem;
+            }
+            }
+        
         </style>
     </head>
     <body>
+        
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}" class="fw-bold">Login</a>
+                        <a href="{{ route('login') }}" class="fw-bold">User Login</a>
                         <a href="{{ route('register') }}" class="fw-bold">Register</a>
                     @endauth
                 </div>

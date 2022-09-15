@@ -1,12 +1,41 @@
 @extends('layouts.app')
 
+
+<style>
+  #app{
+    background-color: white;
+  }
+
+  body{
+    background-color: white;
+  }
+
+  div.card{
+  border-radius: 20px;
+  }
+
+  .border{
+    border-radius: 10px;
+  }
+
+  #btn{
+    border-radius: 10px;
+  }
+
+  .form-select{
+    border-radius: 10px;
+  }
+ 
+</style>
+
+
 @section('content')
-<div class="container">
+<div class="container mt-5 pt-5">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="card rounded-0 shadow text-reset">
+            <div class="card shadow text-reset">
                 <div class="card-header">
-                  <div class="card-title h3 my-2 text-center">Welcome, {{ Auth::user()->name }}!</div>
+                  <div class="card-title h3 my-2 text-center fw-bold"><span class="text-primary">Welcome</span>, {{ Auth::user()->name }}!</div>
                 </div>
 
                 <div class="card-body">
@@ -107,7 +136,7 @@
                             <!-- Select Basic -->
                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
                               <label class=" control-label" for="month">Month</label>
-                              <select id="month" name="month" class="form-select rounded-0">
+                              <select id="month" name="month" class="form-select">
                                 <option value="January">January</option>
                                 <option value="February">February</option>
                                 <option value="March">March</option>
@@ -126,7 +155,7 @@
                             <!-- Select Basic -->
                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
                               <label class=" control-label" for="year">Year</label>
-                              <select id="year" name="year" class="form-select rounded-0">
+                              <select id="year" name="year" class="form-select">
                                 @php
                                 for($i= (date("Y") - 20); $i < (date("Y") + 5); $i++ ):
                                 $year = $i;
@@ -141,7 +170,7 @@
                             <!-- Button -->
                               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
                                 <div class="d-grid">
-                                  <button type="submit" class="btn btn-primary btn-sm rounded-0 bg-gradient">Download</button>
+                                  <button type="submit" class="btn btn-primary btn-sm bg-gradient" id="btn">Download</button>
                                 </div>
                               </div>
   

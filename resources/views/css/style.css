@@ -10,7 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 html,
 body {
-    background-color: #000;
+    background-color: white;
     color: #dddddd;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -234,6 +234,8 @@ nav.horizontal ul li {
 }
 
 
+
+
 /* horizontal menu */
 
 img {
@@ -244,7 +246,7 @@ img {
 /*end reset*/
 
 body {
-    background-color: #000 !important;
+    background-color: white;
     color: #dddddd !important;
     font-family: 'Raleway', sans-serif !important;
     font-weight: 700;
