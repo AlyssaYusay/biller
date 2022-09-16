@@ -19,8 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/pay','billController@pay');
-Route::get('/home/quick',function(){
-	return view('quick');
+// Route::get('/home/quick',function(){
+// 	return view('quick');
+// });
+Route::get('/home/paypal',function(){
+	return view('paypal');
 });
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');

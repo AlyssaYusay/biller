@@ -154,7 +154,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-3">	
 										<div class="payment-info">
 											
-											<h3 class="pay-title">Dedit Card Info</h3>
+											<h3 class="pay-title">Debit Card Info</h3>
 											<form>
 												<div class="tab-for">				
 													<h5>NAME ON CARD</h5>

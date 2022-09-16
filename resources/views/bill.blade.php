@@ -21,7 +21,7 @@
 	
 </head>
 <body>
-	<h1><center>Online Electricity Billing System</center></h1>
+	<h1><center>MERALCA BILL</center></h1>
 	<hr>
   <br>
   <br>
