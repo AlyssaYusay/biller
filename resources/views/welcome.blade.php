@@ -96,7 +96,7 @@
             }
 
             .hours{
-                color: #F15623
+                color: #F15623;
             }
 
            

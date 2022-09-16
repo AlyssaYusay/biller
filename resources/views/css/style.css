@@ -348,7 +348,7 @@ p.footer a:hover {
     text-decoration: none;
     color: #a9acb1;
     font-weight: 600;
-    curs or: pointer;
+    cursor: pointer;
     text-align: center;
     list-style: none;
     outline: none;
@@ -377,7 +377,7 @@ p.footer a:hover {
 }
 
 h2.resp-accordion {
-    curs or: pointer;
+    cursor: pointer;
     padding: 5px;
     display: none;
 }
@@ -417,7 +417,7 @@ li.resp-tab-item span .pic4 {
     border: 1px solid #e7ebee;
     padding: 15px 0px;
     margin-bottom: 15px;
-    curs or: pointer;
+    cursor: pointer;
 }
 
 li.resp-tab-item.resp-tab-active span label {
@@ -554,7 +554,7 @@ input.text_box {
     font-size: 16px;
     outline: none;
     width: 22%;
-    curs or: pointer;
+    cursor: pointer;
     font-weight: 600;
     margin-bottom: 30px;
     transition: 0.5s all;
@@ -629,7 +629,7 @@ input.text_box {
     padding-left: 22px;
     line-height: 28px;
     color: #404040;
-    curs or: pointer;
+    cursor: pointer;
 }
 
 .radio input[type="radio"] {
@@ -654,7 +654,7 @@ input.text_box {
     outline: none;
     border: 3px solid #B5E045;
     background: #fff;
-    curs or: pointer;
+    cursor: pointer;
 }
 
 .radio i {

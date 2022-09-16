@@ -21,13 +21,34 @@ body>#app>.container{
    align-items: center;
    justify-content: center
 }
+
+.card{
+    border-radius:20px;
+    padding: 3rem;
+}
+
+.btn{
+            border-radius:20px;
+            background-color:#F15623;
+            color: white;
+}
+            .btn:hover{
+                color: white;
+                filter:brightness(80%)
+            }
+
+            @media screen and (max-width: 480px){
+                .container-fluid{
+                    padding: 0px;
+                }
+        }
 </style>
 @endsection
 @section('content')
 
 <div class="container">
     <div class="col-lg-5 col-md-6 col-sm-10 col-xs-12">
-        <div class="card rounded-0 shadow text-reset">
+        <div class="card shadow text-reset">
             <div class="card-header">
                 <div class="card-title h3 fw-bold text-center my-2">Admin Login</div>
             </div>
@@ -54,7 +75,7 @@ body>#app>.container{
                             <label for="password" class="control-label">Password</label>
 
                             <div class="">
-                                <input id="password" type="password" class="form-control rounded-0" name="password" required>
+                                <input id="password" type="password" class="form-control " name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -64,7 +85,7 @@ body>#app>.container{
                             </div>
                         </div>
 
-                        <div class="">
+                        <div class="mb-3">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
@@ -72,13 +93,13 @@ body>#app>.container{
                             </div>
                         </div>
 
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary rounded-0 bg-gradient">
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn">
                                 Login
                             </button>
                         </div>
                         <div class="">
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                            <a href="{{ route('password.request') }}">
                                 Forgot Your Password?
                             </a>
                         </div>
