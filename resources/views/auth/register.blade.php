@@ -335,11 +335,11 @@
                                                     </button>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                                                <p class="">Already have an account?</p>
+                                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 mb-3">
+                                                <p class="mt-3">Already have an account?</p>
                                                     </div>
-                                                    <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                                                <a href="{{ route('welcome') }}" class="text-decoration-none">Login</a>
+                                                    <div class="col-xs col-sm col-md col-lg col-xl col-xxl mt-3">
+                                                <a href="{{ route('welcome') }}" class="text-decoration-none ">Login</a>
                                                     </div>
                                                 </div>
                                             </div>
