@@ -37,7 +37,8 @@
 
     <style>
         #navbar-brand{
-            color: #F15623; 
+            color: #F15623;
+            font-weight: 900; 
         }
 
         #nav-link{
