@@ -43,6 +43,7 @@
 
         #nav-link{
             color: black;
+            margin-left: 10px;
         }
     </style>
 </head>
