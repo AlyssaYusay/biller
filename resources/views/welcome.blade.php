@@ -26,15 +26,17 @@
             src="https://kit.fontawesome.com/656d817613.js"
             crossorigin="anonymous"></script>
              <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+             <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+
 
         <!-- Styles -->
         <style>
            html, body {
                 background-color: white;
-                background-image: url("../images/manpaid.png");
+                background-image: url("../images/wind.jpg");
                 color: black;
                 font-family: 'Raleway', sans-serif;
-                font-weight: 700;
+                font-weight: 600;
                 height: 100vh;
                 background-size: cover;
                 margin: 0;
@@ -58,8 +60,7 @@
                 position: absolute;
                 right: 10px;
                 top: 18px;
-                padding-right: 8rem;
-                padding-top: 1rem;
+                margin: auto;
             }
 
             .content {
@@ -67,7 +68,13 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 4.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                align-content: center;
+                align-items: center;
+                margin-top:5rem;
             }
 
             .links > a {
@@ -83,51 +90,238 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-            .sub{
-                font-size: 16px;
-                font-weight: bold;
+
+            .title,.sub{
+                color:white;
             }
 
-            /* media query */
-            @media screen and (max-width: 480px){
+            .hours{
+                color: #F15623
+            }
+
+           
+            body>#app>.container{
+             flex-shrink: 1;
+             flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+}
+
+            .card{
+            border-radius:20px;
+            padding: 1rem;
+}
+
+            .btn{
+            border-radius:20px;
+            background-color:#F15623;
+            color: white;
+}
+            .btn:hover{
+                color: white;
+                filter:brightness(80%)
+            }
+
+
+                /* media query */
+                @media screen and (max-width: 480px){
                 .top-right{
                 padding-left: 10rem;
                 padding-right:0;
                 }
 
-                .m-b-md {
-                font-size: 3rem;
-            }
-            }
-        
+                .links > a {
+                color: black;
+                padding: 0 5px;
+                }
+                .title{
+                    font-size: 3.5rem;
+                    margin-top:18rem;
+                    padding-top: 10rem;
+                }
+                
+                .column.iconify{
+                    flex-direction: row;
+                align-content:center;
+                }
+        }
+
+
+        @media screen and (min-width: 481px) and (max-width:575px){
+            .top-right{
+                padding-left: 10rem;
+                padding-right:0;
+                }
+
+                .links > a {
+                color: black;
+                padding: 0 5px;
+                }
+                .title{
+                    font-size: 3.5rem;
+                    margin-top:18rem;
+                    padding-top: 10rem;
+                }
+                
+                .column.iconify{
+                    flex-direction: row;
+                align-content:center;
+                }
+        }
+
+        @media screen and (min-width: 576px) and (max-width:767px){
+            .top-right{
+                padding-left: 10rem;
+                padding-right:0;
+                }
+
+                .links > a {
+                color: black;
+                padding: 0 5px;
+                }
+                .title{
+                    font-size: 3.5rem;
+                    margin-top:10rem;
+                    padding-top: 10rem;
+                }
+                
+                .column.iconify{
+                    flex-direction: row;
+                align-content:center;
+                }
+        }           
+        @media screen and (min-width: 768px) and (max-width:991px){
+            .title{
+                    font-size: 3.5rem;
+                    margin-left: 1rem;
+                }
+
+                .links > a {
+                color: black;
+                padding: 0 10px;
+                }
+        }       
         </style>
     </head>
     <body>
         
         <div class="flex-center position-ref full-height">
+            
             @if (Route::has('login'))
                 <div class="top-right links">
+                    <a href="{{url('/admin/login')}}" class="text-light">Admin Login</a>
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}" class="fw-bold">User Login</a>
-                        <a href="{{ route('register') }}" class="fw-bold">Register</a>
+                        <a href="{{ route('login') }}"></a>
+                        <a href="{{ route('register') }}"></a>
                     @endauth
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Online Electricity Billing System
-                    <p class="sub">Simple PHP Project using Laravel 9 Framework</p>
+       
+                <div class="container mt-5">
+                    <div class="row mt-5 mb-5">
+                      <div class="col-xs col-sm col-md-4 col-lg-6 col-xl-6 col-xxl-6">
+                <div class="title m-b-md text-center">
+                    MERALCA ONLINE
+                    <h3 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h3>
+                    <div class="row">
+                        <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+                   <span class="iconify" data-icon="entypo:light-bulb"></span>
+                   </div>
+                   <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+                   <span class="iconify" data-icon="simple-line-icons:paypal"></span>
+                   </div>
                 </div>
+                </div>
+                      </div>
+                      <div class="col-xs col-sm col-md-8 col-lg-6 col-xl-6 col-xxl-6  mb-5">
 
-                <div class="text-center">
-                    <a href="{{url('/admin/login')}}" class="btn btn-lg btn-primary bg-gradient bg-primary rounded-pill px-4 fw-bolder">Login to Admin card</a>
+                <div class="container">
+                    <div class="col-xs-8 col-sm col-md col-lg col-xl-10 col-xxl-10">
+                        <div class="card shadow text-reset">
+                            <div class="card-header">
+                                <div class="card-title h3 my-2 text-center fw-bolder">Login</div>
+                            </div>
+                
+                            <div class="card-body">
+                                <div class="container-fluid">
+                                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                                        {{ csrf_field() }}
+                
+                                        <div class="mb-3{{ $errors->has('email') ? ' has-error' : '' }}">
+                                            <label for="email" class="control-label">Email</label>
+                
+                                            <div class="">
+                                                <input id="email" type="email" class="form-control rounded-0" name="email" value="{{ old('email') }}" required autofocus>
+                
+                                                @if ($errors->has('email'))
+                                                    <span class="help-block">
+                                                        <strong>{{ $errors->first('email') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                
+                                        <div class="mb-3{{ $errors->has('password') ? ' has-error' : '' }}">
+                                            <label for="password" class="control-label">Password</label>
+                
+                                            <div class="">
+                                                <input id="password" type="password" class="form-control rounded-0" name="password" required>
+                
+                                                @if ($errors->has('password'))
+                                                    <span class="help-block">
+                                                        <strong>{{ $errors->first('password') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                
+                                        <div class="mb-3">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                                </label>
+                                            </div>
+                                        </div>
+                
+                                        <div class="mb-3">
+                                            <div class="d-grid">
+                                                <button type="submit" class="btn fw-bold">
+                                                    Login
+                                                </button>
+                                            </div>
+                                        </div>
+                
+                                        <div class="mb-3">
+                
+                                            <a class="text-decoration-none" href="{{ route('password.request') }}">
+                                                Forgot Your Password?
+                                            </a>
+                                           
+                                        </div>
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                                            <p class="">New to Meralca online?</p>
+                                                </div>
+                                                <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+                                            <a href="{{ route('register') }}" class="text-decoration-none">Register Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                      </div>
         </div>
-
-        
+    </div>
+      
     </body>
 </html>
