@@ -10,13 +10,28 @@
   }
 
   #btn{
-    border-radius: 10px;
-  }
-
+   border-radius:20px;
+  background-color:#F15623;
+  color: white;
+}
+  #btn:hover{
+  color: white;
+  filter:brightness(80%)
+}
   .form-select{
     border-radius: 10px;
   }
 
+/* .rate{
+color:#F15623;
+} */
+               /* media query */
+ @media screen and (max-width: 480px){
+
+  p.current{
+    font-size: 1.5rem;
+  }
+}
 </style>
 
 
@@ -105,7 +120,7 @@
                         <!-- Button -->
                         <div class="mb-3">
                           <div class="d-grid">
-                            <button type="submit" class="btn btn-primary bg-gradient" id="btn">Submit</button>
+                            <button type="submit" class="btn" id="btn">Submit</button>
                           </div>
                         </div>
                         </div>
@@ -119,7 +134,7 @@
                               <!-- Form Name -->
                               <legend class="w-auto mx-3 px-4 border-0 mt-n4 h4 fw-bolder">Update Electricty Rate</legend>
                               <div class="container-fluid">
-                                <p class="current">Current Rate = <span>&#x20B1; {{ Auth::user()->rate }} </span></p>
+                                <p class="current">Current Rate = <span class="rate text-primary">&#x20B1; {{ Auth::user()->rate }} </span></p>
                                 
                                 <!-- Text input-->
                                 <div class="mb-3">
@@ -129,7 +144,7 @@
                                 <!-- Button -->
                                 <div class="mb-3">
                                   <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary bg-gradient" id="btn">Update</button>
+                                    <button type="submit" class="btn" id="btn">Update</button>
                                   </div>
                                 </div>
                               </div>

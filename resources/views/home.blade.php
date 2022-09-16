@@ -90,7 +90,7 @@
                         <div class="row justify-content-center">
                           <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
                             <div class="d-grid">
-                              <a href="{{url('/home/pay')}}" class="btn btn-primary rounded-pill px-4"> Pay</a>
+                              <a href="{{url('/home/paypal')}}" class="btn btn-primary rounded-pill px-4"> Pay</a>
                             </div>
                           </div>
                         </div>

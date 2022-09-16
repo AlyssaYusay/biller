@@ -33,20 +33,33 @@
     <link href="{{ URL::asset('css/common.css') }}" rel="stylesheet">
     @yield('custom_css')
 
+
+
+    <style>
+        #navbar-brand{
+            color: #F15623;
+            font-weight: 900; 
+        }
+
+        #nav-link{
+            color: black;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg  navbar-expand-md navbar-dark bg-primary bg-gradient">
+        <nav class="navbar navbar-expand-lg  navbar-expand-md navbar-dark bg-light shadow">
             <div class="container">
                 {{-- <div class="navbar-header"> --}}
                      <!-- Branding Image -->
-                     <a class="navbar-brand" href="{{ url('/') }}">
+                     <a class="navbar-brand" id="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
 
                     <!-- Collapsed Hamburger -->
                     <button
-                    class="navbar-toggler text-light"
+                    class="navbar-toggler text-dark"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navmenu"
@@ -67,11 +80,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li class='nav-item'><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                            <li class='nav-item'><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                            <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('welcome') }}">Login</a></li>
+                            <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle text-light fw-bold" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                <a href="#" class="dropdown-toggle text-dark fw-bold" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} </span>
                                 </a>
 
