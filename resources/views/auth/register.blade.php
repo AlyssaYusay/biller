@@ -8,6 +8,14 @@ body>#app{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: white;
+    background-image: url("../images/manpaid.png");
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    height: 100vh;
+    background-size: cover;
+    margin: 0;
 }
 body>#app>nav{
     width: 100%;
@@ -18,16 +26,27 @@ body>#app>.container{
    flex-grow: 1;
    display: flex;
    align-items: center;
-   justify-content: center
+   justify-content: center;
+   background-color: transparent;
+}
+
+
+.card{
+    border-radius:20px;
+    padding: 3rem;
+}
+
+.btn{
+    border-radius:20px;
 }
 </style>
 @endsection
 @section('content')
 <div class="container">
     <div class="col-lg-7 col-md-8 col-sm-10 col-xs-12">
-        <div class="card rounded-0 shadow text-reset">
+        <div class="card shadow text-reset">
             <div class="card-header">
-                <div class="card-title h3 fw bolder my-2 text-center">Register</div>
+                <div class="card-title h3 fw-bolder my-2 text-center">Register</div>
             </div>
 
             <div class="card-body">
@@ -103,7 +122,7 @@ body>#app>.container{
 
                     <div class="mb-3">
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary bg-gradient rounded-0">
+                            <button type="submit" class="btn btn-primary">
                                 Register
                             </button>
                         </div>

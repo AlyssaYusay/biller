@@ -1,12 +1,32 @@
 @extends('layouts.app')
 
+<style>
+  div.card{
+    border-radius: 20px;
+  }
+
+  .border{
+    border-radius: 10px;
+  }
+
+  #btn{
+    border-radius: 10px;
+  }
+
+  .form-select{
+    border-radius: 10px;
+  }
+
+</style>
+
+
 @section('content')
-<div class="container">
+<div class="container mt-5 pt-5">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="card rounded-0 shadow text-reset">
+            <div class="card shadow text-reset">
                 <div class="card-header">
-                  <div class="card-title h3 my-2 text-center fw-bold">Welcome, {{ Auth::user()->name }}!</div>
+                  <div class="card-title h3 my-2 text-center fw-bold"><span class="text-primary">Welcome</span>, {{ Auth::user()->name }}!</div>
                 </div>
 
                 <div class="card-body">
@@ -85,7 +105,7 @@
                         <!-- Button -->
                         <div class="mb-3">
                           <div class="d-grid">
-                            <button type="submit" class="btn btn-primary bg-gradient rounded-0">Submit</button>
+                            <button type="submit" class="btn btn-primary bg-gradient" id="btn">Submit</button>
                           </div>
                         </div>
                         </div>
@@ -109,7 +129,7 @@
                                 <!-- Button -->
                                 <div class="mb-3">
                                   <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary bg-gradient rounded-0">Update</button>
+                                    <button type="submit" class="btn btn-primary bg-gradient" id="btn">Update</button>
                                   </div>
                                 </div>
                               </div>
