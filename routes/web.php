@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AdminLoginController;
+use App\Http\Controllers\Auth\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +16,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 
@@ -31,3 +34,5 @@ Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
 Route::post('/admin/store','billController@store')->name('admin.store');
 Route::post('/admin/updaterate','billController@updaterate')->name('admin.updaterate');
 Route::post('/home/pdf','billController@pdf')->name('home.pdf');
+
+Route::post('/login', 'Auth\LoginController@login')->name('admin.login');

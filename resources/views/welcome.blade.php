@@ -146,6 +146,10 @@
                     flex-direction: row;
                 align-content:center;
                 }
+
+                .container-fluid{
+                    padding: 0px;
+                }
         }
 
 
@@ -319,7 +323,6 @@
                         </div>
                     </div>
                 </div>
-                      </div>
         </div>
     </div>
       
