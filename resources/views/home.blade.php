@@ -20,8 +20,25 @@
 
   #btn{
     border-radius: 10px;
+    background-color: #F15623;
+    color: white;
   }
 
+  #btn:hover{
+   color: white;
+    filter:brightness(80%)
+  }
+
+.btn{
+    border-radius: 10px;
+    background-color: #F15623;
+    color: white;
+  }
+
+  .btn:hover{
+   color: white;
+    filter:brightness(80%)
+  }
   .form-select{
     border-radius: 10px;
   }
@@ -90,7 +107,7 @@
                         <div class="row justify-content-center">
                           <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
                             <div class="d-grid">
-                              <a href="{{url('/home/paypal')}}" class="btn btn-primary rounded-pill px-4"> Pay</a>
+                              <a href="{{url('/home/paypal')}}" class="btn px-4" id="btn"> Pay</a>
                             </div>
                           </div>
                         </div>
@@ -170,7 +187,7 @@
                             <!-- Button -->
                               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
                                 <div class="d-grid">
-                                  <button type="submit" class="btn btn-primary btn-sm bg-gradient" id="btn">Download</button>
+                                  <button type="submit" class="btn btn-sm" id="btn">Download</button>
                                 </div>
                               </div>
   

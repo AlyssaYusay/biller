@@ -80,7 +80,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('welcome') }}">Login</a></li>
+                            <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('welcome') }}">User Login</a></li>
                             <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
