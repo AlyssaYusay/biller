@@ -42,7 +42,7 @@
         }
 
         #nav-link{
-            color: black;
+            color:#6A7C92;
             margin-left: 10px;
         }
     </style>
@@ -84,7 +84,7 @@
                             <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle text-dark fw-bold" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                <a href="#" class="dropdown-toggle fw-bold" style="color:#6A7C92" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} </span>
                                 </a>
 
@@ -176,9 +176,10 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
       © 2022 Copyright:
-      <a style="color:#8b8988">Meralca.com</a>
+      <a style="color:
+      #6A7C92">Meralca.com</a>
     </div>
     <!-- Copyright -->
   </footer>
