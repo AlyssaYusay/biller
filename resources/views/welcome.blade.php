@@ -217,7 +217,7 @@
                 <div class="top-right links">
                     <a href="{{url('/admin/login')}}" class="text-light">Admin Login</a>
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" class="text-light">Home</a>
                     @else
                         <a href="{{ route('login') }}"></a>
                         <a href="{{ route('register') }}"></a>

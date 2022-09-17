@@ -62,20 +62,20 @@ color:#F15623;
                         <div class="container-fluid">
                         <!-- Text input-->
                         <div class="mb-3">
-                          <label class="control-label" for="customerId">Customer Id</label>  
+                          <label class="control-label" for="customerId">Customer ID</label>  
                           <input id="customerId" name="customerId" placeholder="" class="form-control rounded-0" required="" type="text">
                         </div>
 
                         <!-- Text input-->
                         <div class="mb-3">
                           <label class="control-label" for="initial">Initial Reading</label>  
-                          <input id="initial" name="initial" placeholder="" class="form-control rounded-0 text-end" required="" type="number" step="any">
+                          <input id="initial" name="initial" placeholder="kwh" class="form-control rounded-0 text-end" required="" type="number" step="any">
                         </div>
 
                         <!-- Text input-->
                         <div class="mb-3">
                           <label class="control-label" for="final">Final Reading</label>  
-                          <input id="final" name="final" placeholder="" class="form-control rounded-0 text-end" required="" type="number" step="any">
+                          <input id="final" name="final" placeholder="kwh" class="form-control rounded-0 text-end" required="" type="number" step="any">
                         </div>
 
                         <!-- Select Basic -->

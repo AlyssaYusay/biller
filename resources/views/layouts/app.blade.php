@@ -45,21 +45,22 @@
             color:#6A7C92;
             margin-left: 10px;
         }
+
     </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg  navbar-expand-md navbar-dark bg-light shadow">
+        <nav class="navbar navbar-expand-lg navbar-expand-md bg-light shadow">
             <div class="container">
                 {{-- <div class="navbar-header"> --}}
                      <!-- Branding Image -->
-                     <a class="navbar-brand" id="navbar-brand" href="{{ url('/') }}">
+                     <span class="iconify" data-icon="ant-design:thunderbolt-twotone" style="color: #f15623;"></span><a class="navbar-brand" id="navbar-brand" href="">
                         {{ config('app.name', 'Laravel') }}
                     </a>
 
                     <!-- Collapsed Hamburger -->
                     <button
-                    class="navbar-toggler text-dark"
+                    class="navbar-toggler text-dark ms-auto"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navmenu"
@@ -115,7 +116,7 @@
 
     <footer class="text-center text-white" style="background-color: #f1f1f1;">
     <!-- Grid container -->
-    <div class="container pt-4">
+    <div class="container pt-4 p-0">
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->

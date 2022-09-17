@@ -36,7 +36,8 @@
         #paypal-button-container{
             display:flex;
             justify-content: center;
-            padding-top: 20rem;
+            padding-top: 30rem;
+            padding-bottom: 30rem;
             
         }
     </style>
