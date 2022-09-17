@@ -31,16 +31,19 @@
 
         <!-- Styles -->
         <style>
-           html, body {
-                background-color: white;
-                background-image: url("../images/wind.jpg");
+          html, body {
+                background-color: #0072CE;
+                background-image: url("../images/online-payments.png");
                 color: black;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 600;
                 height: 100vh;
-                background-size: cover;
-                margin: 0px;
+                background-size: contain;
+                background-position: start;
+                background-repeat: no-repeat;
+                margin: 0;
             }
+
 
             .full-height {
                 height: 100vh;
@@ -96,7 +99,7 @@
             }
 
             .hours{
-                color: #F15623;
+                color: #FFB20C;
             }
 
            
@@ -116,7 +119,7 @@
 
             .btn{
             border-radius:20px;
-            background-color:#F15623;
+            background-color:#FFB20C;
             color: white;
 }
             .btn:hover{
@@ -150,6 +153,10 @@
                 .container-fluid{
                     padding: 0px;
                 }
+
+                html, body{
+                    background-image: none;
+                }
         }
 
 
@@ -173,6 +180,10 @@
                     flex-direction: row;
                 align-content:center;
                 }
+
+                html, body{
+                    background-image: none;
+                }
         }
 
         @media screen and (min-width: 576px) and (max-width:767px){
@@ -194,6 +205,10 @@
                 .column.iconify{
                     flex-direction: row;
                 align-content:center;
+                }
+
+                html, body{
+                    background-image: none;
                 }
         }           
         @media screen and (min-width: 768px) and (max-width:991px){
@@ -333,7 +348,7 @@
                         
                                             <div class="mb-3">
                                                 <div class="d-grid">
-                                                    <button type="submit" class="btn">
+                                                    <button type="submit" class="btn fw-bold">
                                                         Register
                                                     </button>
                                                 </div>

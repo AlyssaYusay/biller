@@ -10,11 +10,12 @@
   }
 
   div#container{
-    padding-top: 15rem;
+    padding-top: 30rem;
+    padding-bottom: 32rem;
   }
 
   #btn{
-    background-color: #F15623;
+    background-color: #FFB20C;
    color: white;
   }
   #btn:hover{
@@ -27,7 +28,7 @@
     <div class="container" id="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
-                <div class="alert alert-success">
+                <div class="alert alert-primary">
                     <h3 class="text-center">Record Added Successfully</h3> 
                     <center><a href="{{ url('/admin') }}" class="btn" id="btn">Go Back</a></center>
                 </div>

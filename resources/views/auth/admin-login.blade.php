@@ -29,7 +29,7 @@ body>#app>.container{
 
 .btn{
             border-radius:20px;
-            background-color:#F15623;
+            background-color:#FFB20C;
             color: white;
 }
             .btn:hover{

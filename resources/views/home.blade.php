@@ -20,7 +20,7 @@
 
   #btn{
     border-radius: 10px;
-    background-color: #F15623;
+    background-color: #FFB20C;
     color: white;
   }
 
@@ -31,7 +31,7 @@
 
 .btn{
     border-radius: 10px;
-    background-color: #F15623;
+    background-color: #FFB20C;
     color: white;
   }
 
@@ -52,7 +52,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="card shadow text-reset">
                 <div class="card-header">
-                  <div class="card-title h3 my-2 text-center fw-bold"><span class="text-primary">Welcome</span>, {{ Auth::user()->name }}!</div>
+                  <div class="card-title h3 my-2 text-center fw-bold"><span style="color:#0072CE;">Welcome</span>, {{ Auth::user()->name }}!</div>
                 </div>
 
                 <div class="card-body">
@@ -107,7 +107,7 @@
                         <div class="row justify-content-center">
                           <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
                             <div class="d-grid">
-                              <a href="{{url('/home/paypal')}}" class="btn px-4" id="btn"> Pay</a>
+                              <a href="{{url('/home/paypal')}}" class="btn px-4 fw-bold" id="btn"> Pay</a>
                             </div>
                           </div>
                         </div>
@@ -187,7 +187,7 @@
                             <!-- Button -->
                               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
                                 <div class="d-grid">
-                                  <button type="submit" class="btn btn-sm" id="btn">Download</button>
+                                  <button type="submit" class="btn btn-sm fw-bold" id="btn">Download</button>
                                 </div>
                               </div>
   

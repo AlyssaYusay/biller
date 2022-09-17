@@ -37,7 +37,7 @@
 
     <style>
         #navbar-brand{
-            color: #F15623;
+            color:#0072CE;
             font-weight: 900; 
         }
 
@@ -54,7 +54,7 @@
             <div class="container">
                 {{-- <div class="navbar-header"> --}}
                      <!-- Branding Image -->
-                     <span class="iconify" data-icon="ant-design:thunderbolt-twotone" style="color: #f15623;"></span><a class="navbar-brand" id="navbar-brand" href="">
+                     <span class="iconify" data-icon="ant-design:thunderbolt-twotone" style="color:#FFB20C;"></span><a class="navbar-brand" id="navbar-brand" href="">
                         {{ config('app.name', 'Laravel') }}
                     </a>
 

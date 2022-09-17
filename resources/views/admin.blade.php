@@ -11,7 +11,7 @@
 
   #btn{
    border-radius:20px;
-  background-color:#F15623;
+  background-color:#FFB20C;
   color: white;
 }
   #btn:hover{
@@ -41,7 +41,7 @@ color:#F15623;
         <div class="col-md-8 col-md-offset-2">
             <div class="card shadow text-reset">
                 <div class="card-header">
-                  <div class="card-title h3 my-2 text-center fw-bold"><span class="text-primary">Welcome</span>, {{ Auth::user()->name }}!</div>
+                  <div class="card-title h3 my-2 text-center fw-bold"><span style="color:#0072CE;">Welcome</span>, {{ Auth::user()->name }}!</div>
                 </div>
 
                 <div class="card-body">
@@ -120,7 +120,7 @@ color:#F15623;
                         <!-- Button -->
                         <div class="mb-3">
                           <div class="d-grid">
-                            <button type="submit" class="btn" id="btn">Submit</button>
+                            <button type="submit" class="btn fw-bold" id="btn">Submit</button>
                           </div>
                         </div>
                         </div>
@@ -134,7 +134,7 @@ color:#F15623;
                               <!-- Form Name -->
                               <legend class="w-auto mx-3 px-4 border-0 mt-n4 h4 fw-bolder">Update Electricty Rate</legend>
                               <div class="container-fluid">
-                                <p class="current">Current Rate = <span class="rate text-primary">&#x20B1; {{ Auth::user()->rate }} </span></p>
+                                <p class="current">Current Rate = <span class="rate" style="color:#0072CE;">&#x20B1; {{ Auth::user()->rate }} </span></p>
                                 
                                 <!-- Text input-->
                                 <div class="mb-3">
@@ -144,7 +144,7 @@ color:#F15623;
                                 <!-- Button -->
                                 <div class="mb-3">
                                   <div class="d-grid">
-                                    <button type="submit" class="btn" id="btn">Update</button>
+                                    <button type="submit" class="btn fw-bold" id="btn">Update</button>
                                   </div>
                                 </div>
                               </div>
