@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LoginController;
+use App\User;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +39,23 @@ Route::post('/admin/updaterate','billController@updaterate')->name('admin.update
 Route::post('/home/pdf','billController@pdf')->name('home.pdf');
 
 Route::post('/login', 'Auth\LoginController@login')->name('admin.login');
+
+
+
+
+Route::get('/data', function () {
+    return view('data')->with('users', User::all());
+})->name('data');
+
+Route::post('/deleteuser',
+    [UserController::class, 'delete']
+)->name('deleteuser');
+
+Route::post('updateuser',
+    [UserController::class, 'update']
+)->name('updateuser');
+
+Route::get('userupdate/{id}', function($id) {
+    return view('userupdate')->with('user', User::find($id));
+})->name('userupdate');
+
