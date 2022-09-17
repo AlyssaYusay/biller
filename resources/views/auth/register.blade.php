@@ -250,7 +250,7 @@
                     <div class="row mt-5 mb-5">
                       <div class="col-xs col-sm col-md-4 col-lg-6 col-xl-6 col-xxl-6">
                 <div class="title m-b-md text-center d-flex align-items-center">
-                    MERALCA ONLINE
+                    MERALCA
                     <h3 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h3>
                       <div class="row">
                         <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
