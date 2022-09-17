@@ -226,6 +226,10 @@
             #register_container{
                 margin-top: 5rem;
             }
+
+            html, body{
+                background-size: cover;
+                }
         }       
         </style>
     </head>

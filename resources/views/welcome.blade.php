@@ -226,7 +226,11 @@
                 color: black;
                 padding: 0 10px;
                 }
-        }       
+
+                html, body{
+                background-size: cover;
+                }
+        }
         </style>
     </head>
     <body>
