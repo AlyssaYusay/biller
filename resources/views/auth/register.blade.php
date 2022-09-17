@@ -239,11 +239,14 @@
                     <h3 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h3>
                     <div class="row">
                         <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                   <span class="iconify" data-icon="entypo:light-bulb"></span>
-                   </div>
-                   <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                   <span class="iconify" data-icon="simple-line-icons:paypal"></span>
-                   </div>
+                            <span class="iconify" data-icon="akar-icons:thunder"></span>
+                            </div>
+                            <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+                           <span class="iconify" data-icon="entypo:light-bulb"></span>
+                           </div>
+                           <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+                           <span class="iconify" data-icon="simple-line-icons:paypal"></span>
+                           </div>
                 </div>
                 </div>
                       </div>
