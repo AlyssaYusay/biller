@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\UserController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LoginController;
 use App\User;
@@ -34,7 +34,11 @@ Route::get('/home/paypal',function(){
 });
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+
+Route::get('/data','UserController@data')->name('data');
+
 Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
+
 Route::post('/admin/store','billController@store')->name('admin.store');
 Route::post('/admin/updaterate','billController@updaterate')->name('admin.updaterate');
 Route::post('/home/pdf','billController@pdf')->name('home.pdf');

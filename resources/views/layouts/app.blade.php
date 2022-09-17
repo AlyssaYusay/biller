@@ -112,6 +112,8 @@
         @yield('content')
     </div>
 
+
+    <script src="{{ asset('js/app.js') }}"></script>
     <!-- Remove the container if you want to extend the Footer to full width. -->
 
     <footer class="text-center text-white" style="background-color: #f1f1f1;">

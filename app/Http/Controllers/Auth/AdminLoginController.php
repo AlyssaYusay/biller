@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Validation\ValidationException;
-use Auth;
+// use Auth;
 
 class AdminLoginController extends Controller
 {
@@ -25,7 +25,7 @@ class AdminLoginController extends Controller
     	]);
     	if(Auth::guard('admin')->attempt(['email' => $request->email,'password' =>$request->password],$request->remember))
     	{
-    		return redirect()->intended(route('admin.dashboard'));
+    		return redirect()->intended(route('data'));
     	}
     	return $this->sendFailedLoginResponse($request);
     }
