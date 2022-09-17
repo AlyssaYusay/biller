@@ -237,7 +237,7 @@
                 <div class="title m-b-md text-center d-flex align-items-center">
                     MERALCA ONLINE
                     <h3 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h3>
-                    <div class="row">
+                      <div class="row">
                         <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
                             <span class="iconify" data-icon="akar-icons:thunder"></span>
                             </div>
@@ -338,7 +338,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 mb-3">
+                                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 ">
                                                 <p class="mt-3">Already have an account?</p>
                                                     </div>
                                                     <div class="col-xs col-sm col-md col-lg col-xl col-xxl mt-3">
