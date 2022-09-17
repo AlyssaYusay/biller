@@ -1,5 +1,31 @@
 @extends('layouts.app')
+
+<style>
+    div#container{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding-top: 5rem;
+        padding-bottom: 32rem;
+    }
+
+    #btn{
+         border-radius:20px;
+         background-color: #FFB20C;
+         color: white;
+    }
+     #btn:hover{
+         color: white;
+         filter:brightness(80%)
+      }
+
+
+
+</style>
+
+
 @section('content')
+<div class="container" id="container">
 <form action="{{ route('updateuser') }}" method="POST">
 @csrf
     <label class="relative block p-3 border-2 border-gray-200 rounded-lg" for="customerId">
@@ -16,9 +42,11 @@
         <input value="{{ $user->name }}" class="w-full p-0 text-sm border-none focus:ring-0" id="name" name="name" type="name" required />
     </label>
     <button type="submit"
-        class="mt-3 mx-auto flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-purple-500 rounded-md md:mb-0 hover:bg-purple-700 md:w-auto"
+        class="btn fw-bold"
+        id="btn"
         data-rounded="rounded-md">
         Update User
     </button>
 </form>
+</div>
 @endsection
