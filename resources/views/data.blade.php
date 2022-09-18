@@ -20,7 +20,30 @@
          filter:brightness(80%)
       }
 
+    .update{
+        padding: .8rem 1rem;
+        background-color: #0072CE;
+        color: white;
+        border-radius: 20px;
+        margin-right: 1rem;
+    }
 
+    .update:hover{
+         color: white;
+         filter:brightness(80%)
+         text-decoration: none;
+      }
+
+
+    form{
+        display: flex;
+        justify-content: center;
+      }
+    
+    #table{
+        padding: 10rem;
+    }
+ 
 
 </style>
 
@@ -45,23 +68,23 @@
 
 @section('content')
 <div class="container" id="container">
-<div class="text-center">
-    <table class="table table-striped table-bordered">
+
+    <table class="table table-striped table-bordered" id="table">
         <thead>
             <tr>
-                <th class="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
-                    <div class="flex items-center">
+                <th class="p-4">
+                    <div class="d-flex justify-content-center">
                         Customer Id
                     </div>
                 </th>
-                <th class="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
-                    <div class="flex items-center">
+                <th class="p-4">
+                    <div class="d-flex justify-content-center">
                         Name
                     </div>
                 </th>
         
-                <th class="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
-                    <div class="flex items-center">
+                <th class="p-4">
+                    <div class="d-flex justify-content-center">
                         Actions
                     </div>
                 </th>
@@ -84,12 +107,12 @@
                         @csrf
                        
                         <a href="{{ url('userupdate/'.$user->id) }}"
-                            class="text-decoration-none fw-bold" style="color:#FFB20C;">
+                            class="update text-decoration-none fw-bold">
                             Update
                         </a>
                         <input type="hidden" name="user_id" value="{{ $user->id }}">
                         <button type="submit"
-                            class="btn" id="btn">
+                            class="btn fw-bold" id="btn">
                             Delete
                         </button>
                     </form>
@@ -100,6 +123,6 @@
     </table>
   
 </div>
-</div>
+
 
 @endsection
