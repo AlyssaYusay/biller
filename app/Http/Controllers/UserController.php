@@ -36,7 +36,7 @@ class UserController extends Controller
 
     public function update(Request $request){
         $user = User::find($request->user_id);
-        $user->customer = $request->customerId;
+        $user->customerId = $request->customerId;
         $user->name = $request->name;
        
         $user->save();
