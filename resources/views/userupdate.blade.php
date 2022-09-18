@@ -70,7 +70,7 @@
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse">
         <div class="position-sticky">
           <div class="list-group list-group-flush mx-3 mt-4">
-            <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+            <a href="{{url('/admin')}}" class="list-group-item list-group-item-action py-2 ripple"
             ><i class="fas fa-money-bill fa-fw me-3"></i><span>Create Bill</span></a
           >
             <a href="{{url('/data')}}" class="list-group-item list-group-item-action py-2 ripple"
