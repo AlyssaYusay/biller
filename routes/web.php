@@ -41,6 +41,12 @@ Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
 
 Route::post('/admin/store','billController@store')->name('admin.store');
 Route::post('/admin/updaterate','billController@updaterate')->name('admin.updaterate');
+
+Route::get('/admin/data',function(){
+	return view('data');
+});
+
+
 Route::post('/home/pdf','billController@pdf')->name('home.pdf');
 
 Route::post('/login', 'Auth\LoginController@login')->name('admin.login');

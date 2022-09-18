@@ -5,10 +5,14 @@
         display: flex;
         justify-content: center;
         align-content: center;
-        padding-top: 5rem;
-        padding-bottom: 32rem;
+        padding-top: 10rem;
     }
 
+
+    div#app{
+        height: 100vh;
+    }
+    
     #btn{
          border-radius:20px;
          background-color: #0072CE;
@@ -19,12 +23,67 @@
          filter:brightness(80%)
       }
 
+      @media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+}
 
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+  background-color: transparent;
+  shadow: none;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
 
 </style>
 
 
 @section('content')
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse">
+        <div class="position-sticky">
+          <div class="list-group list-group-flush mx-3 mt-4">
+            <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+            ><i class="fas fa-money-bill fa-fw me-3"></i><span>Create Bill</span></a
+          >
+            <a href="{{url('/data')}}" class="list-group-item list-group-item-action py-2 ripple"
+            ><i class="fas fa-users fa-fw me-3"></i><span>Customers</span></a
+          >
+            <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+              ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Bills</span></a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- Sidebar -->
+
 <div class="container" id="container">
 <form action="{{ route('updateuser') }}" method="POST">
 @csrf
