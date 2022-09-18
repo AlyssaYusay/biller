@@ -112,7 +112,7 @@
             <a href="{{url('/admin')}}" class="list-group-item list-group-item-action py-2 ripple"
             ><i class="fas fa-money-bill fa-fw me-3"></i><span>Create Bill</span></a
           >
-            <a href="{{url('/data')}}" class="list-group-item list-group-item-action py-2 ripple"
+            <a href="{{url('/admin/data')}}" class="list-group-item list-group-item-action py-2 ripple"
             ><i class="fas fa-users fa-fw me-3"></i><span>Customers</span></a
           >
             <a href="#" class="list-group-item list-group-item-action py-2 ripple"
@@ -179,7 +179,7 @@
                         {{-- check if we have delete user route --}}
                         @csrf
                        
-                        <a href="{{ url('userupdate/'.$user->id) }}"
+                        <a href="{{ url('/admin/userupdate/'.$user->id) }}"
                             class="update text-decoration-none fw-bold">
                             Update
                         </a>
