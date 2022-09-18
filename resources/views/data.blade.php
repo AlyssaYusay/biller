@@ -89,28 +89,22 @@
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
 
+/* #alert{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 300px;
+  max-height: 100px;
+} */
+
 </style>
 
-{{-- alert --}}
-@if (Session::has('success'))
-<div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 mb-5" role="alert">
-    <div class="flex">
-        <p class="text-sm text-center">{{ Session::get('success') }}</p>
-    </div>
-</div>
-@endif
 
-@if (Session::has('deleted'))
-<div class="bg-red-100 border-t-4 border-red-500 rounded-b text-red-900 px-4 py-3 mb-5" role="alert">
-    <div class="flex">
-        <p class="text-sm text-center">{{ Session::get('deleted') }}</p>
-    </div>
-</div>
-@endif
-{{-- end alert --}}
 
 
 @section('content')
+
     <!-- Sidebar -->
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse">
         <div class="position-sticky">
@@ -129,6 +123,23 @@
       </nav>
       <!-- Sidebar -->
 
+      {{-- alert --}}
+@if (Session::has('success'))
+<div class="alert alert-primary" role="alert">
+    <div class="flex">
+        <p class="text-center">{{ Session::get('success') }}</p>
+    </div>
+</div>
+@endif
+
+@if (Session::has('deleted'))
+<div class="alert alert-primary" role="alert">
+    <div class="flex">
+        <p class="text-center">{{ Session::get('deleted') }}</p>
+    </div>
+</div>
+@endif
+{{-- end alert --}}
 <div class="container" id="container">
 
     <table class="table table-striped table-bordered" id="table">
