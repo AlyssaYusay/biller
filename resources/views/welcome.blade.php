@@ -32,13 +32,15 @@
         <!-- Styles -->
         <style>
            html, body {
-                background-color: white;
-                background-image: url("../images/wind.jpg");
+                background-color: #0072CE;
+                background-image: url("../images/online-payments.png");
                 color: black;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 600;
                 height: 100vh;
-                background-size: cover;
+                background-size: contain;
+                background-position: start;
+                background-repeat: no-repeat;
                 margin: 0;
             }
 
@@ -96,7 +98,7 @@
             }
 
             .hours{
-                color: #F15623;
+                color: #FFB20C;
             }
 
            
@@ -116,7 +118,7 @@
 
             .btn{
             border-radius:20px;
-            background-color:#F15623;
+            background-color:#FFB20C;
             color: white;
 }
             .btn:hover{
@@ -125,6 +127,12 @@
             }
 
 
+            .image{
+                position: absolute;
+                bottom: 1px;
+                left: 1px;
+                max-width: 900px;
+            }
                 /* media query */
                 @media screen and (max-width: 480px){
                 .top-right{
@@ -150,6 +158,10 @@
                 .container-fluid{
                     padding: 0px;
                 }
+
+                html, body{
+                    background-image: none;
+                }
         }
 
 
@@ -173,6 +185,10 @@
                     flex-direction: row;
                 align-content:center;
                 }
+
+                html, body{
+                    background-image: none;
+                }
         }
 
         @media screen and (min-width: 576px) and (max-width:767px){
@@ -195,6 +211,10 @@
                     flex-direction: row;
                 align-content:center;
                 }
+
+                html, body{
+                    background-image: none;
+                }
         }           
         @media screen and (min-width: 768px) and (max-width:991px){
             .title{
@@ -206,18 +226,24 @@
                 color: black;
                 padding: 0 10px;
                 }
-        }       
+
+                html, body{
+                background-size: cover;
+                }
+        }
         </style>
     </head>
     <body>
         
+
+        {{-- <img src="../images/online-payments.png" alt="online payment" class="image"> --}}
         <div class="flex-center position-ref full-height">
             
             @if (Route::has('login'))
                 <div class="top-right links">
                     <a href="{{url('/admin/login')}}" class="text-light">Admin Login</a>
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" class="text-light">Home</a>
                     @else
                         <a href="{{ route('login') }}"></a>
                         <a href="{{ route('register') }}"></a>
@@ -230,15 +256,19 @@
                     <div class="row mt-5 mb-5">
                       <div class="col-xs col-sm col-md-4 col-lg-6 col-xl-6 col-xxl-6">
                 <div class="title m-b-md text-center">
-                    MERALCA ONLINE
+                    MERALCA
                     <h3 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h3>
                     <div class="row">
-                        <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+                    <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+                    <span class="iconify" data-icon="akar-icons:thunder"></span>
+                    </div>
+                    <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
                    <span class="iconify" data-icon="entypo:light-bulb"></span>
                    </div>
                    <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
                    <span class="iconify" data-icon="simple-line-icons:paypal"></span>
                    </div>
+                   
                 </div>
                 </div>
                       </div>

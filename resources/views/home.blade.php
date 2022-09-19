@@ -2,6 +2,10 @@
 
 
 <style>
+  /* div#app{
+    height: 100vh;
+
+  } */
   #app{
     background-color: white;
   }
@@ -20,8 +24,25 @@
 
   #btn{
     border-radius: 10px;
+    background-color: #FFB20C;
+    color: white;
   }
 
+  #btn:hover{
+   color: white;
+    filter:brightness(80%)
+  }
+
+.btn{
+    border-radius: 10px;
+    background-color: #FFB20C;
+    color: white;
+  }
+
+  .btn:hover{
+   color: white;
+    filter:brightness(80%)
+  }
   .form-select{
     border-radius: 10px;
   }
@@ -30,12 +51,12 @@
 
 
 @section('content')
-<div class="container mt-5 pt-5">
+<div class="container mt-5 pt-5 mb-5 pb-5" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="card shadow text-reset">
                 <div class="card-header">
-                  <div class="card-title h3 my-2 text-center fw-bold"><span class="text-primary">Welcome</span>, {{ Auth::user()->name }}!</div>
+                  <div class="card-title h3 my-2 text-center fw-bold"><span style="color:#0072CE;">Welcome</span>, {{ Auth::user()->name }}!</div>
                 </div>
 
                 <div class="card-body">
@@ -90,7 +111,7 @@
                         <div class="row justify-content-center">
                           <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
                             <div class="d-grid">
-                              <a href="{{url('/home/paypal')}}" class="btn btn-primary rounded-pill px-4"> Pay</a>
+                              <a href="{{url('/home/paypal')}}" class="btn px-4 fw-bold" id="btn"> Pay</a>
                             </div>
                           </div>
                         </div>
@@ -170,7 +191,7 @@
                             <!-- Button -->
                               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
                                 <div class="d-grid">
-                                  <button type="submit" class="btn btn-primary btn-sm bg-gradient" id="btn">Download</button>
+                                  <button type="submit" class="btn btn-sm fw-bold" id="btn">Download</button>
                                 </div>
                               </div>
   

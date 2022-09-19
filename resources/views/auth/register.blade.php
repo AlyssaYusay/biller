@@ -31,16 +31,19 @@
 
         <!-- Styles -->
         <style>
-           html, body {
-                background-color: white;
-                background-image: url("../images/wind.jpg");
+          html, body {
+                background-color: #0072CE;
+                background-image: url("../images/online-payments.png");
                 color: black;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 600;
                 height: 100vh;
-                background-size: cover;
-                margin: 0px;
+                background-size: contain;
+                background-position: start;
+                background-repeat: no-repeat;
+                margin: 0;
             }
+
 
             .full-height {
                 height: 100vh;
@@ -96,7 +99,7 @@
             }
 
             .hours{
-                color: #F15623;
+                color: #FFB20C;
             }
 
            
@@ -116,7 +119,7 @@
 
             .btn{
             border-radius:20px;
-            background-color:#F15623;
+            background-color:#FFB20C;
             color: white;
 }
             .btn:hover{
@@ -150,6 +153,10 @@
                 .container-fluid{
                     padding: 0px;
                 }
+
+                html, body{
+                    background-image: none;
+                }
         }
 
 
@@ -173,6 +180,10 @@
                     flex-direction: row;
                 align-content:center;
                 }
+
+                html, body{
+                    background-image: none;
+                }
         }
 
         @media screen and (min-width: 576px) and (max-width:767px){
@@ -195,6 +206,10 @@
                     flex-direction: row;
                 align-content:center;
                 }
+
+                html, body{
+                    background-image: none;
+                }
         }           
         @media screen and (min-width: 768px) and (max-width:991px){
             .title{
@@ -211,6 +226,10 @@
             #register_container{
                 margin-top: 5rem;
             }
+
+            html, body{
+                background-size: cover;
+                }
         }       
         </style>
     </head>
@@ -235,15 +254,18 @@
                     <div class="row mt-5 mb-5">
                       <div class="col-xs col-sm col-md-4 col-lg-6 col-xl-6 col-xxl-6">
                 <div class="title m-b-md text-center d-flex align-items-center">
-                    MERALCA ONLINE
+                    MERALCA
                     <h3 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h3>
-                    <div class="row">
+                      <div class="row">
                         <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                   <span class="iconify" data-icon="entypo:light-bulb"></span>
-                   </div>
-                   <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                   <span class="iconify" data-icon="simple-line-icons:paypal"></span>
-                   </div>
+                            <span class="iconify" data-icon="akar-icons:thunder"></span>
+                            </div>
+                            <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+                           <span class="iconify" data-icon="entypo:light-bulb"></span>
+                           </div>
+                           <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+                           <span class="iconify" data-icon="simple-line-icons:paypal"></span>
+                           </div>
                 </div>
                 </div>
                       </div>
@@ -330,12 +352,12 @@
                         
                                             <div class="mb-3">
                                                 <div class="d-grid">
-                                                    <button type="submit" class="btn">
+                                                    <button type="submit" class="btn fw-bold">
                                                         Register
                                                     </button>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 mb-3">
+                                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 ">
                                                 <p class="mt-3">Already have an account?</p>
                                                     </div>
                                                     <div class="col-xs col-sm col-md col-lg col-xl col-xxl mt-3">

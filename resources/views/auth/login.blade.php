@@ -9,7 +9,6 @@ body>#app{
     align-items: center;
     justify-content: center;
     background-color: white;
-    background-image: url("../images/manpaid.png");
     color: black;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -36,8 +35,20 @@ body>#app>.container{
 }
 
 .btn{
-    border-radius:20px;
+            border-radius:20px;
+            background-color:#FFB20C;
+            color: white;
 }
+            .btn:hover{
+                color: white;
+                filter:brightness(80%)
+            }
+
+            @media screen and (max-width: 480px){
+                .container-fluid{
+                    padding: 0px;
+                }
+        }
 
 </style>
 @endsection
@@ -46,7 +57,7 @@ body>#app>.container{
     <div class="col-lg-5 col-md-6 col-sm-10 col-xs-12">
         <div class="card shadow text-reset">
             <div class="card-header">
-                <div class="card-title h3 my-2 text-center fw-bolder">Login</div>
+                <div class="card-title h3 my-2 text-center fw-bolder">User Login</div>
             </div>
 
             <div class="card-body">
@@ -92,7 +103,7 @@ body>#app>.container{
 
                         <div class="mb-3">
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary ">
+                                <button type="submit" class="btn">
                                     Login
                                 </button>
                             </div>
@@ -100,7 +111,7 @@ body>#app>.container{
 
                         <div class="mb-3">
 
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                            <a href="{{ route('password.request') }}">
                                 Forgot Your Password?
                             </a>
                         </div>

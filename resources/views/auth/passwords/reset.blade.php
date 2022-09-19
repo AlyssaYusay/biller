@@ -22,7 +22,14 @@ body>#app>.container{
 }
 
 #btn{
+    background-color: #FFB20C;
         border-radius: 10px;
+        color: white;
+    }
+
+    #btn:hover{
+    filter: brightness(80%)
+        color: white;
     }
 
   .border{
@@ -93,7 +100,7 @@ body>#app>.container{
 
                         <div class="mb-3">
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary bg-gradient" id="btn">
+                                <button type="submit" class="btn fw-bold" id="btn">
                                     Reset Password
                                 </button>
                             </div>

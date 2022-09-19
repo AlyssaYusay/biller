@@ -1,4 +1,5 @@
 @extends('layouts.app')
+{{-- @extends('layouts.sidebar') --}}
 
 <style>
   div.card{
@@ -11,7 +12,7 @@
 
   #btn{
    border-radius:20px;
-  background-color:#F15623;
+  background-color:#FFB20C;
   color: white;
 }
   #btn:hover{
@@ -32,16 +33,91 @@ color:#F15623;
     font-size: 1.5rem;
   }
 }
+
+
+<style>
+        #navbar-brand{
+            color:#0072CE;
+            font-weight: 900; 
+        }
+
+        #nav-link{
+            color:#6A7C92;
+            margin-left: 10px;
+        }
+
+
+        body {
+  background-color: #fbfbfb;
+}
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+  background-color: transparent;
+  shadow: none;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.position-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
 </style>
 
 
 @section('content')
-<div class="container mt-5 pt-5">
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-money-bill fa-fw me-3"></i><span>Create Bill</span></a
+        >
+          <a href="{{url('/admin/data')}}" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-users fa-fw me-3"></i><span>Customers</span></a
+        >
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+            ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Bills</span></a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+
+
+<div class="container mt-5 pt-5 mb-5 pb-5">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="card shadow text-reset">
                 <div class="card-header">
-                  <div class="card-title h3 my-2 text-center fw-bold"><span class="text-primary">Welcome</span>, {{ Auth::user()->name }}!</div>
+                  <div class="card-title h3 my-2 text-center fw-bold"><span style="color:#0072CE;">Welcome</span>, {{ Auth::user()->name }}!</div>
                 </div>
 
                 <div class="card-body">
@@ -62,20 +138,20 @@ color:#F15623;
                         <div class="container-fluid">
                         <!-- Text input-->
                         <div class="mb-3">
-                          <label class="control-label" for="customerId">Customer Id</label>  
+                          <label class="control-label" for="customerId">Customer ID</label>  
                           <input id="customerId" name="customerId" placeholder="" class="form-control rounded-0" required="" type="text">
                         </div>
 
                         <!-- Text input-->
                         <div class="mb-3">
                           <label class="control-label" for="initial">Initial Reading</label>  
-                          <input id="initial" name="initial" placeholder="" class="form-control rounded-0 text-end" required="" type="number" step="any">
+                          <input id="initial" name="initial" placeholder="kwh" class="form-control rounded-0 text-end" required="" type="number" step="any">
                         </div>
 
                         <!-- Text input-->
                         <div class="mb-3">
                           <label class="control-label" for="final">Final Reading</label>  
-                          <input id="final" name="final" placeholder="" class="form-control rounded-0 text-end" required="" type="number" step="any">
+                          <input id="final" name="final" placeholder="kwh" class="form-control rounded-0 text-end" required="" type="number" step="any">
                         </div>
 
                         <!-- Select Basic -->
@@ -120,7 +196,7 @@ color:#F15623;
                         <!-- Button -->
                         <div class="mb-3">
                           <div class="d-grid">
-                            <button type="submit" class="btn" id="btn">Submit</button>
+                            <button type="submit" class="btn fw-bold" id="btn">Submit</button>
                           </div>
                         </div>
                         </div>
@@ -134,7 +210,7 @@ color:#F15623;
                               <!-- Form Name -->
                               <legend class="w-auto mx-3 px-4 border-0 mt-n4 h4 fw-bolder">Update Electricty Rate</legend>
                               <div class="container-fluid">
-                                <p class="current">Current Rate = <span class="rate text-primary">&#x20B1; {{ Auth::user()->rate }} </span></p>
+                                <p class="current">Current Rate = <span class="rate" style="color:#0072CE;">&#x20B1; {{ Auth::user()->rate }} </span></p>
                                 
                                 <!-- Text input-->
                                 <div class="mb-3">
@@ -144,7 +220,7 @@ color:#F15623;
                                 <!-- Button -->
                                 <div class="mb-3">
                                   <div class="d-grid">
-                                    <button type="submit" class="btn" id="btn">Update</button>
+                                    <button type="submit" class="btn fw-bold" id="btn">Update</button>
                                   </div>
                                 </div>
                               </div>

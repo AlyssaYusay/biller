@@ -37,29 +37,30 @@
 
     <style>
         #navbar-brand{
-            color: #F15623;
+            color:#0072CE;
             font-weight: 900; 
         }
 
         #nav-link{
-            color: black;
+            color:#6A7C92;
             margin-left: 10px;
         }
+
     </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg  navbar-expand-md navbar-dark bg-light shadow">
+        <nav class="navbar navbar-expand-lg navbar-expand-md bg-light shadow">
             <div class="container">
                 {{-- <div class="navbar-header"> --}}
                      <!-- Branding Image -->
-                     <a class="navbar-brand" id="navbar-brand" href="{{ url('/') }}">
+                     <span class="iconify" data-icon="ant-design:thunderbolt-twotone" style="color:#FFB20C;"></span><a class="navbar-brand" id="navbar-brand" href="/">
                         {{ config('app.name', 'Laravel') }}
                     </a>
 
                     <!-- Collapsed Hamburger -->
                     <button
-                    class="navbar-toggler text-dark"
+                    class="navbar-toggler text-dark ms-auto"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navmenu"
@@ -80,11 +81,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('welcome') }}">Login</a></li>
+                            <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('welcome') }}">User Login</a></li>
                             <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle text-dark fw-bold" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                <a href="#" class="dropdown-toggle fw-bold" style="color:#6A7C92" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} </span>
                                 </a>
 
@@ -108,9 +109,86 @@
             </div>
         </nav>
 
+        
         @yield('content')
     </div>
 
+
+    <script src="{{ asset('js/app.js') }}"></script>
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+
+    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4 p-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
+      © 2022 Copyright:
+      <a style="color:
+      #6A7C92">Meralca.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <!-- End of .container -->
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
