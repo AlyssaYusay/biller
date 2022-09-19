@@ -75,7 +75,9 @@
 
 nav#sidebarMenu{
   width:200px;
+  box-shadow: none;
 }
+
 
 .position-sticky {
   position: relative;
@@ -109,7 +111,7 @@ p.current{
 @section('content')
 
     <!-- Sidebar -->
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse" style="box-shadow: none;">
         <div class="position-sticky">
           <div class="list-group list-group-flush mx-3 mt-4">
             <a href="{{url('/admin')}}" class="list-group-item list-group-item-action py-2 ripple"

@@ -84,7 +84,7 @@ p.current{
 
 @section('content')
     <!-- Sidebar -->
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse" style="box-shadow: none;">
       <div class="position-sticky">
         <div class="list-group list-group-flush mx-3 mt-4">
 
