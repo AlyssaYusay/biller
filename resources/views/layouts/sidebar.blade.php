@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <link rel="icon" href="../images/favicon2.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link
     rel="stylesheet"
@@ -46,96 +46,173 @@
             margin-left: 10px;
         }
 
-
-        body {
-  background-color: #fbfbfb;
-}
-@media (min-width: 991.98px) {
-  main {
-    padding-left: 240px;
-  }
-}
-
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  padding: 58px 0 0; /* Height of navbar */
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-  width: 240px;
-  z-index: 600;
-  background-color: transparent;
-  shadow: none;
-}
-
-@media (max-width: 991.98px) {
-  .sidebar {
-    width: 100%;
-  }
-}
-.sidebar .active {
-  border-radius: 5px;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-}
-
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: 0.5rem;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-}
     </style>
 </head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-lg navbar-expand-md bg-light shadow">
+            <div class="container">
+                {{-- <div class="navbar-header"> --}}
+                     <!-- Branding Image -->
+                     <span class="iconify" data-icon="ant-design:thunderbolt-twotone" style="color:#FFB20C;"></span><a class="navbar-brand" id="navbar-brand" href="/">
+                        MERALCA
+                    </a>
+                    {{-- sidebar menu --}}
+                    <button
+                    class="navbar-toggler text-dark ms-auto"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebarMenu"
+                 >
+                 <i class="fa-solid fa-bars-staggered"></i>
+                 </button>
+                    
+                    <!-- Collapsed Hamburger -->
+                    <button
+                    class="navbar-toggler text-dark ms-auto"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navmenu"
+                 >
+                    <i class="fa-solid fa-bars"></i>
+                 </button>
+
+                   
+                {{-- </div> --}}
+
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                      &nbsp;
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('welcome') }}">User Login</a></li>
+                            <li class='nav-item'><a class="nav-link" id="nav-link" href="{{ route('register') }}">Register</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle fw-bold" style="color:#6A7C92" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    {{ Auth::user()->name }} </span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        @yield('content')
+    </div>
 
 
-    <!-- Sidebar -->
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse">
-      <div class="position-sticky">
-        <div class="list-group list-group-flush mx-3 mt-4">
-          {{-- <a
-            href="#"
-            class="list-group-item list-group-item-action py-2 ripple"
-            aria-current="true"
-          >
-            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
-          </a> --}}
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
-            <i class="fas fa-chart-area fa-fw me-3"></i><span>Webiste traffic</span>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-            ><i class="fas fa-lock fa-fw me-3"></i><span>Password</span></a
-          >
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-            ><i class="fas fa-chart-line fa-fw me-3"></i><span>Analytics</span></a
-          >
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
-            <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-            ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a
-          >
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-            ><i class="fas fa-globe fa-fw me-3"></i><span>International</span></a
-          >
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-            ><i class="fas fa-building fa-fw me-3"></i><span>Partners</span></a
-          >
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-            ><i class="fas fa-calendar fa-fw me-3"></i><span>Calendar</span></a
-          >
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-            ><i class="fas fa-users fa-fw me-3"></i><span>Users</span></a
-          >
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-            ><i class="fas fa-money-bill fa-fw me-3"></i><span>Sales</span></a
-          >
-        </div>
-      </div>
-    </nav>
-    <!-- Sidebar -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+
+    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4 p-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
   
+        <!-- Twitter -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
+      © 2022 Copyright:
+      <a style="color:
+      #6A7C92">Meralca.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
+  <!-- End of .container -->
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
+    <script>
+      $(".sidebar ul li").on('click', function(){
+        $(".sidebar ul li.active").removeClass("active");
+        $(this).addClass('active');
+      });
+
+        $('.open-btn').on('click', function(){
+          $('.sidebar').addClass('active');
+        });
+
+        $('.close-btn').on('click',function(){
+          $('.sidebar').removeClass('active');
+        });
+    </script>
+</body>
+</html>

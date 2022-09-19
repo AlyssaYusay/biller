@@ -47,7 +47,10 @@
     border-radius: 10px;
   }
  
-
+.section{
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
 /* media query */
   @media screen and (max-width: 480px){
 p.current{
@@ -69,10 +72,13 @@ th{
   margin-left: 10rem;
 }
 }
+
+
 </style>
 
 
 @section('content')
+<section class="section">
 <div class="container mt-5 pt-5 mb-5 pb-5" >
     <div class="row">
         <div class="col-xs col-sm col-md-8 col-md-offset-2" id="position">
@@ -228,6 +234,7 @@ th{
         </div>
     </div>
 </div>
+</section>
 @endsection
 
 

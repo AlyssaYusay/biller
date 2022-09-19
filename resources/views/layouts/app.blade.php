@@ -57,7 +57,6 @@
                      <span class="iconify" data-icon="ant-design:thunderbolt-twotone" style="color:#FFB20C;"></span><a class="navbar-brand" id="navbar-brand" href="/">
                         MERALCA
                     </a>
-                   
                     
                     <!-- Collapsed Hamburger -->
                     <button

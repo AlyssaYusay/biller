@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.sidebar')
 
 
 <style>
@@ -50,10 +50,8 @@
         justify-content: center;
       }
     
-    @media (min-width: 991.98px) {
-  main {
-    padding-left: 240px;
-  }
+.table{
+  border-radius: 20px;
 }
 
 /* Sidebar */
@@ -64,40 +62,45 @@
   left: 0;
   padding: 58px 0 0; /* Height of navbar */
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-  width: 240px;
   z-index: 600;
   background-color: transparent;
   shadow: none;
 }
 
-@media (max-width: 991.98px) {
-  .sidebar {
-    width: 100%;
-  }
-}
 .sidebar .active {
   border-radius: 5px;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
-.sidebar-sticky {
+
+nav#sidebarMenu{
+  width:200px;
+}
+
+.position-sticky {
   position: relative;
   top: 0;
-  height: calc(100vh - 48px);
-  padding-top: 0.5rem;
+  width:200px;
+  padding-top: 1rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
 
-/* #alert{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  max-width: 300px;
-  max-height: 100px;
-} */
 
+ /* media query */
+@media screen and (max-width: 480px){
+
+p.current{
+  font-size: 1.5rem;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width:991px){
+#position{
+  margin-left: 10rem;
+}
+}
 </style>
 
 
@@ -142,7 +145,7 @@
 {{-- end alert --}}
 <div class="container" id="container">
 
-    <table class="table table-striped table-bordered" id="table">
+    <table class="table table-striped" id="table">
         <thead>
             <tr>
                 <th class="">
