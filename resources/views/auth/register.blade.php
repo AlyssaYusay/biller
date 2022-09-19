@@ -85,7 +85,7 @@
     
     /* -webkit-text-stroke: 1px blue; */
     /* -webkit-text-fill-color: white; */
-    text-shadow: 0px 1px 4px #23430C;
+    /* text-shadow: 0px 1px 4px #23430C; */
     margin-top:10.5rem;
 }
 
@@ -105,10 +105,10 @@
 
 .title,.sub{
     color:white;
-    text-shadow: -1px 1px 2px #000,
+    /* text-shadow: -1px 1px 2px #000,
       1px 1px 2px #000,
       1px -1px 0 #000,
-      -1px -1px 0 #000;
+      -1px -1px 0 #000; */
     text-decoration: none;
     display: flex;
     flex-direction: column;

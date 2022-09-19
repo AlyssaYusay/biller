@@ -83,7 +83,7 @@
     
     /* -webkit-text-stroke: 1px blue; */
     /* -webkit-text-fill-color: white; */
-    text-shadow: 0px 1px 4px #23430C;
+    /* text-shadow: 0px 1px 4px #23430C; */
 }
 
 .links > a {
@@ -102,10 +102,10 @@
 
 .title,.sub{
     color:white;
-    text-shadow: -1px 1px 2px #000,
+    /* text-shadow: -1px 1px 2px #000,
       1px 1px 2px #000,
       1px -1px 0 #000,
-      -1px -1px 0 #000;
+      -1px -1px 0 #000; */
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -122,8 +122,8 @@
 
 
 body>#app>.container{
- flex-shrink: 1;
- flex-grow: 1;
+flex-shrink: 1;
+flex-grow: 1;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -417,7 +417,7 @@ padding-bottom: 5rem;
                                             </div>
                                         </div>
                 
-                                        <div class="mb-3">
+                                        <div class="mb-2">
                 
                                             <a class="text-decoration-none" href="{{ route('password.request') }}">
                                                 Forgot Your Password?
@@ -493,7 +493,7 @@ padding-bottom: 5rem;
 <h1 class="text-light">Trusted Electricians, Home Advisor Approved</h1>
 </div>
 <div class="col-xs col-sm col-md col-lg col-xl-4 col-xxl-4 text-center mt-2" id="request-button">
-<a href="#" class="request-button fw-bold">Request Quote Now</a> 
+<a href="#" class="request-button fw-bold shadow">Request Quote Now</a> 
 </div>
 </div>
 </div>
