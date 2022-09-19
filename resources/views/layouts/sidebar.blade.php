@@ -125,20 +125,9 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <!-- Remove the container if you want to extend the Footer to full width. -->
 
-    <footer class="text-center text-white" style="background-color: #f1f1f1;">
-    <!-- Grid container -->
-    <div class="container pt-4 p-0">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a
-          class="btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-  
+    <footer class="text-center text-dark p-5" style="background-color: rgba(0, 0, 0, 0.2);">
+        <h4 class="pb-5">Get the latest news and service advisories from Meralca.</h4>
+   
         <!-- Twitter -->
         <a
           class="btn-link btn-floating btn-lg text-dark m-1"
@@ -188,13 +177,52 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
+    <!-- <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
       © 2022 Copyright:
       <a style="color:
       #6A7C92">Meralca.com</a>
-    </div>
+    </div> -->
     <!-- Copyright -->
   </footer>
+  <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.2); ">
+        <footer class="container py-5">
+            <div class="row text-dark">
+                <div class="col-lg-3">
+                    <h3>Contact Us:</h3>
+                    <ul class="nav">
+                        <li class="nav-item mb-2">0009-001-0123 <br/> 0009-001-0124 <br/> 0009-001-0125</li>
+                       
+                        
+                    </ul>
+                    <h3 class="pt-3">or Email Us at</h3>
+                    <ul class="nav">
+                    <li class="nav-item mb-2">meralca.support@help.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3>About Meralca</h3>
+                    <p>is a private sector electric distribution utility company in the Philippines covering 10 cities and 5 municipalities. Meralca celebrates 10 years of service in 2022, committed to providing reliable and affordable energy.
+                    </p>
+                    
+                </div>
+                <div class="col-lg-4 offset-1">
+                <form action="../send.php" method="post">
+                        <h3>Subscribe to our newsletter</h3>
+                        <p>Get latest news from Meralca</p>
+                        <div class="d-flex w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control me-2 "  name="emailadd"
+                                placeholder="Email address">
+                            <button type="submit" class="btn " name="subscribeExpl">Subscribe</button>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>&copy; 2022 Copyright: <a style="color: #6A7C92">Meralca.com</a></p>
+            </div>
+        </footer>
 
   <!-- End of .container -->
     <!-- Scripts -->
