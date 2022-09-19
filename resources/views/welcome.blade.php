@@ -70,13 +70,16 @@
             }
 
             .title {
-                font-size: 4.5rem;
+                font-size: 7rem;
                 display: flex;
                 flex-direction: column;
                 justify-content:center;
                 align-content: center;
                 align-items: center;
-                margin-top:5rem;
+                
+                /* -webkit-text-stroke: 1px blue; */
+            	/* -webkit-text-fill-color: white; */
+                text-shadow: 0px 1px 4px #23430C;
             }
 
             .links > a {
@@ -95,7 +98,19 @@
 
             .title,.sub{
                 color:white;
+                text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                align-content: center;
+                align-items: center;
+                
             }
+            
 
             .hours{
                 color: #FFB20C;
@@ -255,21 +270,27 @@
                 <div class="container mt-5">
                     <div class="row mt-5 mb-5">
                       <div class="col-xs col-sm col-md-4 col-lg-6 col-xl-6 col-xxl-6">
-                <div class="title m-b-md text-center">
+                <div class="title m-b-md text-center mb-0">
                     MERALCA
-                    <h3 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h3>
-                    <div class="row">
-                    <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                    <span class="iconify" data-icon="akar-icons:thunder"></span>
-                    </div>
-                    <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                   <span class="iconify" data-icon="entypo:light-bulb"></span>
-                   </div>
-                   <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                   <span class="iconify" data-icon="simple-line-icons:paypal"></span>
-                   </div>
-                   
+
                 </div>
+                <div class="sub m-b-md text-center ">
+                    
+                    <div class="row">
+                    <h1 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h1>
+                    </div>
+                    <div class="row">
+                        <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl">
+                        <span class="iconify display-5" data-icon="akar-icons:thunder"></span>
+                    </div>
+                    <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl">
+                        <span class="iconify display-5" data-icon="entypo:light-bulb"></span>
+                    </div>
+                   <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl">
+                        <span class="iconify display-5" data-icon="simple-line-icons:paypal"></span>
+                   </div>
+                </div> 
+                
                 </div>
                       </div>
                       <div class="col-xs col-sm col-md-8 col-lg-6 col-xl-6 col-xxl-6  mb-5">
@@ -277,9 +298,9 @@
                 <div class="container">
                     <div class="col-xs-8 col-sm col-md col-lg col-xl-10 col-xxl-10">
                         <div class="card shadow text-reset">
-                            <div class="card-header">
+                            <!-- <div class="card-header">
                                 <div class="card-title h3 my-2 text-center fw-bolder">Login</div>
-                            </div>
+                            </div> -->
                 
                             <div class="card-body">
                                 <div class="container-fluid">
@@ -338,12 +359,9 @@
                                            
                                         </div>
                                         <div>
-                                            <div class="row">
-                                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                                            <p class="">New to Meralca online?</p>
-                                                </div>
+                                            <div class="row">                                                
                                                 <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                                            <a href="{{ route('register') }}" class="text-decoration-none">Register Now</a>
+                                            <a href="{{ route('register') }}" class="text-decoration-none">Register Your Account</a>
                                                 </div>
                                             </div>
                                         </div>
