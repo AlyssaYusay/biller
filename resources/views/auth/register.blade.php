@@ -241,7 +241,7 @@ padding-bottom: 10rem;
     .title{
         font-size: 3.5rem;
         margin-top:10rem;
-        padding-top: 10rem;
+        padding-top: 12rem;
     }
     
     .column.iconify{
