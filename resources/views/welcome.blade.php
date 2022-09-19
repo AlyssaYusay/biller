@@ -21,7 +21,7 @@
     />
 
     <!-- Styles -->
-    <!-- <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet"> -->
+    <link rel="icon" href="../images/favicon2.ico" type="image/x-icon">
     
             <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -30,9 +30,7 @@
             crossorigin="anonymous"></script>
              <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
              <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
-       
-    </head>
-    <body>
+
 
     <style>
         /* welcomeBlade */
@@ -85,7 +83,7 @@
     
     /* -webkit-text-stroke: 1px blue; */
     /* -webkit-text-fill-color: white; */
-    text-shadow: 0px 1px 4px #23430C;
+    /* text-shadow: 0px 1px 4px #23430C; */
 }
 
 .links > a {
@@ -104,10 +102,10 @@
 
 .title,.sub{
     color:white;
-    text-shadow: -1px 1px 2px #000,
+    /* text-shadow: -1px 1px 2px #000,
       1px 1px 2px #000,
       1px -1px 0 #000,
-      -1px -1px 0 #000;
+      -1px -1px 0 #000; */
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -124,8 +122,8 @@
 
 
 body>#app>.container{
- flex-shrink: 1;
- flex-grow: 1;
+flex-shrink: 1;
+flex-grow: 1;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -156,15 +154,33 @@ color: white;
 }
 
 
-
 .list{
 padding-top: 10rem;
 padding-bottom: 10rem;
 }
 
 
+.banner{
+background-color: #0072CE;
+padding-top: 5rem;
+padding-bottom: 5rem;
+}
 
 
+.request-button{
+    background-color: #FFB20C;
+    color: white;
+    border: 0px;
+    border-radius: 20px;
+    padding: .5rem 3rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.request-button:hover{
+    color: white;
+    filter: brightness(80%)
+}
 
     /* media query */
     @media screen and (max-width: 480px){
@@ -179,8 +195,8 @@ padding-bottom: 10rem;
     }
     .title{
         font-size: 3.5rem;
-        margin-top:18rem;
-        padding-top: 10rem;
+        margin-top:1rem;
+        padding-top: 4rem;
     }
     
     .column.iconify{
@@ -195,10 +211,12 @@ padding-bottom: 10rem;
     .hero-section{
         background-image: none;
     }
+
+    #request-button{
+       padding-top: 1rem;
+    }
+
 }
-
-
-
 
 
 @media screen and (min-width: 481px) and (max-width:575px){
@@ -213,8 +231,8 @@ padding-bottom: 10rem;
     }
     .title{
         font-size: 3.5rem;
-        margin-top:18rem;
-        padding-top: 10rem;
+        margin-top:1rem;
+        padding-top: 4rem;
     }
     
     .column.iconify{
@@ -225,7 +243,12 @@ padding-bottom: 10rem;
     .hero-section{
         background-image: none;
     }
+    #request-button{
+       padding-top: 1rem;
+    }
 }
+
+
 
 @media screen and (min-width: 576px) and (max-width:767px){
 .top-right{
@@ -239,8 +262,8 @@ padding-bottom: 10rem;
     }
     .title{
         font-size: 3.5rem;
-        margin-top:10rem;
-        padding-top: 10rem;
+        /* margin-top:1rem; */
+        padding-top: 1rem;
     }
     
     .column.iconify{
@@ -250,6 +273,21 @@ padding-bottom: 10rem;
 
     .hero-section{
         background-image: none;
+    }
+
+    /* .banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content:center;
+    } */
+    .request-button{
+        font-size: .8rem;
+    }
+
+    #request-button{
+       padding-top: 3rem;
     }
 }           
 @media screen and (min-width: 768px) and (max-width:991px){
@@ -266,11 +304,17 @@ padding-bottom: 10rem;
     .hero-section{
     background-size: cover;
     }
+
+    #request-button{
+       padding-top: 3rem;
+    }
 }
     </style>
-        
+ 
+    </head>
+ <body>
 <section class="hero-section">
-        {{-- <img src="../images/online-payments.png" alt="online payment" class="image"> --}}
+
         <div class="flex-center position-ref full-height">
             
             @if (Route::has('login'))
@@ -296,22 +340,25 @@ padding-bottom: 10rem;
                 <div class="sub m-b-md text-center ">
                     
                     <div class="row">
-                    <h1 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h1>
+                    <h1 class="sub fw-bold text-center ">Powering your homes <span class="hours">24/7</span></h1>
                     </div>
                     <div class="row">
-                        <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl">
+                        <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl mb-3">
                         <span class="iconify display-5" data-icon="akar-icons:thunder"></span>
                     </div>
-                    <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl">
+                    <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl mb-3">
                         <span class="iconify display-5" data-icon="entypo:light-bulb"></span>
                     </div>
-                   <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl">
+                   <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl mb-3">
                         <span class="iconify display-5" data-icon="simple-line-icons:paypal"></span>
                    </div>
                 </div> 
                 
                 </div>
                       </div>
+
+
+{{-- login container --}}
                       <div class="col-xs col-sm col-md-8 col-lg-6 col-xl-6 col-xxl-6  mb-5">
 
                 <div class="container">
@@ -370,7 +417,7 @@ padding-bottom: 10rem;
                                             </div>
                                         </div>
                 
-                                        <div class="mb-3">
+                                        <div class="mb-2">
                 
                                             <a class="text-decoration-none" href="{{ route('password.request') }}">
                                                 Forgot Your Password?
@@ -391,8 +438,11 @@ padding-bottom: 10rem;
                     </div>
                 </div>
         </div>
+
+{{-- end of login container --}}
     </div>
 </section>
+
 
 
 <section class="list">
@@ -435,6 +485,95 @@ padding-bottom: 10rem;
  </section>
 
 
+
+<section class="banner">
+    <div class="container" id="banner_container">
+        <div class="row">
+            <div class="col-xs col-sm col-md col-lg col-xl-8 col-xxl-8 text-center">
+<h1 class="text-light">Trusted Electricians, Home Advisor Approved</h1>
+</div>
+<div class="col-xs col-sm col-md col-lg col-xl-4 col-xxl-4 text-center mt-2" id="request-button">
+<a href="#" class="request-button fw-bold shadow">Request Quote Now</a> 
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4 p-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
+      © 2022 Copyright:
+      <a style="color:
+      #6A7C92">Meralca.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
                         
                         

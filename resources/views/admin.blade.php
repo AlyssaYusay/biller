@@ -1,7 +1,8 @@
-@extends('layouts.app')
-{{-- @extends('layouts.sidebar') --}}
+
+@extends('layouts.sidebar')
 
 <style>
+
   div.card{
     border-radius: 20px;
   }
@@ -23,38 +24,13 @@
     border-radius: 10px;
   }
 
-/* .rate{
-color:#F15623;
-} */
-               /* media query */
- @media screen and (max-width: 480px){
 
-  p.current{
-    font-size: 1.5rem;
-  }
+.section{
+padding-top:10rem;
+padding-bottom:5rem;
 }
 
 
-<style>
-        #navbar-brand{
-            color:#0072CE;
-            font-weight: 900; 
-        }
-
-        #nav-link{
-            color:#6A7C92;
-            margin-left: 10px;
-        }
-
-
-        body {
-  background-color: #fbfbfb;
-}
-@media (min-width: 991.98px) {
-  main {
-    padding-left: 240px;
-  }
-}
 
 /* Sidebar */
 .sidebar {
@@ -64,36 +40,51 @@ color:#F15623;
   left: 0;
   padding: 58px 0 0; /* Height of navbar */
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-  width: 240px;
   z-index: 600;
   background-color: transparent;
   shadow: none;
 }
 
-@media (max-width: 991.98px) {
-  .sidebar {
-    width: 100%;
-  }
-}
 .sidebar .active {
   border-radius: 5px;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
+
+nav#sidebarMenu{
+  width:200px;
+}
+
 .position-sticky {
   position: relative;
   top: 0;
-  height: calc(100vh - 48px);
+  width:200px;
   padding-top: 1rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+
+ /* media query */
+@media screen and (max-width: 480px){
+
+p.current{
+  font-size: 1.5rem;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width:991px){
+#position{
+  margin-left: 10rem;
+}
 }
 </style>
 
 
 @section('content')
     <!-- Sidebar -->
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse" style="box-shadow: none;">
       <div class="position-sticky">
         <div class="list-group list-group-flush mx-3 mt-4">
 
@@ -111,10 +102,9 @@ color:#F15623;
     </nav>
     <!-- Sidebar -->
 
-
-<div class="container mt-5 pt-5 mb-5 pb-5">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+<section class="section">
+<div class="container mb-5 pb-5" id="container">
+        <div class="col-xs col-sm col-md-8 col-md-offset-2 col-lg col-xl col-xxl" id="position">
             <div class="card shadow text-reset">
                 <div class="card-header">
                   <div class="card-title h3 my-2 text-center fw-bold"><span style="color:#0072CE;">Welcome</span>, {{ Auth::user()->name }}!</div>
@@ -232,4 +222,5 @@ color:#F15623;
         </div>
     </div>
 </div>
+</section>
 @endsection

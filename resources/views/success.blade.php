@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.sidebar')
 
 <style>
 
@@ -25,9 +25,29 @@
    color: white;
     filter:brightness(80%)
   }
+
+
+ 
+
+ /* media query */
+@media screen and (max-width: 480px){
+
+p.current{
+  font-size: 1.5rem;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width:991px){
+#position{
+  margin-left: 10rem;
+}
+}
 </style>
 
 @section('content')
+
+
     <div class="container" id="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
