@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 <style>
+
+  div#app{
+    height: 100vh;
+  }
     #btn{
         border-radius: 10px;
     }
@@ -10,8 +14,7 @@
   }
 
   div#container{
-    padding-top: 30rem;
-    padding-bottom: 32rem;
+    padding-top: 15rem;
   }
 
   #btn{

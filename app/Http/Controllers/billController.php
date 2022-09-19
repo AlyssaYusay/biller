@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Bill;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Request as Irequest;
 use Illuminate\Support\Facades\Session;
 use PDF;
-use Auth;
+
 class billController extends Controller
 {
     /**
