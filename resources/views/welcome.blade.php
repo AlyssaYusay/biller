@@ -176,8 +176,8 @@ padding-bottom: 10rem;
     }
     .title{
         font-size: 3.5rem;
-        margin-top:18rem;
-        padding-top: 10rem;
+        margin-top:1rem;
+        padding-top: 5rem;
     }
     
     .column.iconify{
@@ -210,8 +210,8 @@ padding-bottom: 10rem;
     }
     .title{
         font-size: 3.5rem;
-        margin-top:18rem;
-        padding-top: 10rem;
+        margin-top:1rem;
+        padding-top: 5rem;
     }
     
     .column.iconify{
@@ -236,8 +236,8 @@ padding-bottom: 10rem;
     }
     .title{
         font-size: 3.5rem;
-        margin-top:10rem;
-        padding-top: 10rem;
+        margin-top:1rem;
+        padding-top: 5rem;
     }
     
     .column.iconify{
@@ -250,7 +250,7 @@ padding-bottom: 10rem;
     }
 }           
 @media screen and (min-width: 768px) and (max-width:991px){
-.title{
+        .title{
         font-size: 3.5rem;
         margin-left: 1rem;
     }
@@ -297,16 +297,16 @@ padding-bottom: 10rem;
                 <div class="sub m-b-md text-center ">
                     
                     <div class="row">
-                    <h1 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h1>
+                    <h1 class="sub fw-bold text-center ">Powering your homes <span class="hours">24/7</span></h1>
                     </div>
                     <div class="row">
-                        <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl">
+                        <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl mb-3">
                         <span class="iconify display-5" data-icon="akar-icons:thunder"></span>
                     </div>
-                    <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl">
+                    <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl mb-3">
                         <span class="iconify display-5" data-icon="entypo:light-bulb"></span>
                     </div>
-                   <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl">
+                   <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl mb-3">
                         <span class="iconify display-5" data-icon="simple-line-icons:paypal"></span>
                    </div>
                 </div> 
@@ -315,7 +315,7 @@ padding-bottom: 10rem;
                       </div>
 
 
-
+{{-- login container --}}
                       <div class="col-xs col-sm col-md-8 col-lg-6 col-xl-6 col-xxl-6  mb-5">
 
                 <div class="container">
@@ -395,6 +395,8 @@ padding-bottom: 10rem;
                     </div>
                 </div>
         </div>
+
+{{-- end of login container --}}
     </div>
 </section>
 
