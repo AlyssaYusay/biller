@@ -94,7 +94,7 @@ body>#app>.container{
                         </div>
 
                         <div class="d-grid mb-3">
-                            <button type="submit" class="btn">
+                            <button type="submit" class="btn fw-bold">
                                 Login
                             </button>
                         </div>

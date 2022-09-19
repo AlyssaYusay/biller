@@ -9,7 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link rel="icon" href="../images/favicon2.ico" type="image/x-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link
         rel="stylesheet"
@@ -30,245 +30,292 @@
 
 
         <!-- Styles -->
-        <style>
-          html, body {
-                background-color: #0072CE;
-                background-image: url("../images/online-payments.png");
-                color: black;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 600;
-                height: 100vh;
-                background-size: contain;
-                background-position: start;
-                background-repeat: no-repeat;
-                margin: 0;
-            }
-
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-                margin: auto;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 4.5rem;
-                display: flex;
-                flex-direction: column;
-                justify-content:center;
-                align-content: center;
-                align-items: center;
-                margin-top:13rem;
-            }
-
-            .links > a {
-                color: black;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-
-            .title,.sub{
-                color:white;
-            }
-
-            .hours{
-                color: #FFB20C;
-            }
-
-           
-            body>#app>.container{
-             flex-shrink: 1;
-             flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: transparent;
+ <style>
+    
+    html,body{
+    background-color: #0072CE;     
+    }
+    
+    
+    .hero-section{
+    background-color: #0072CE;
+    background-image: url("../images/online-payments.png");
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    height: 100vh;
+    background-size: contain;
+    background-position: start;
+    background-repeat: no-repeat;
+    margin: 0;
 }
 
-            .card{
-            border-radius:20px;
-            padding: 1rem;
+.full-height {
+    height: 100vh;
 }
 
-            .btn{
-            border-radius:20px;
-            background-color:#FFB20C;
-            color: white;
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
-            .btn:hover{
-                color: white;
-                filter:brightness(80%)
-            }
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    margin: auto;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content: center;
+    align-items: center;
+    
+    /* -webkit-text-stroke: 1px blue; */
+    /* -webkit-text-fill-color: white; */
+    /* text-shadow: 0px 1px 4px #23430C; */
+    margin-top:10.5rem;
+}
+
+.links > a {
+    color: black;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.title,.sub{
+    color:white;
+    /* text-shadow: -1px 1px 2px #000,
+      1px 1px 2px #000,
+      1px -1px 0 #000,
+      -1px -1px 0 #000; */
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content: center;
+    align-items: center;
+    
+}
 
 
-                /* media query */
-                @media screen and (max-width: 480px){
-                .top-right{
-                padding-left: 10rem;
-                padding-right:0;
-                }
-
-                .links > a {
-                color: black;
-                padding: 0 5px;
-                }
-                .title{
-                    font-size: 3.5rem;
-                    margin-top:23rem;
-                    padding-top: 19rem;
-                }
-                
-                .column.iconify{
-                    flex-direction: row;
-                align-content:center;
-                }
-
-                .container-fluid{
-                    padding: 0px;
-                }
-
-                html, body{
-                    background-image: none;
-                }
-        }
+.hours{
+    color: #FFB20C;
+}
 
 
-        @media screen and (min-width: 481px) and (max-width:575px){
-            .top-right{
-                padding-left: 10rem;
-                padding-right:0;
-                }
+body>#app>.container{
+ flex-shrink: 1;
+ flex-grow: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: transparent;
+}
 
-                .links > a {
-                color: black;
-                padding: 0 5px;
-                }
-                .title{
-                    font-size: 3.5rem;
-                    margin-top:23rem;
-                    padding-top: 19rem;
-                }
-                
-                .column.iconify{
-                    flex-direction: row;
-                align-content:center;
-                }
+.card{
+border-radius:20px;
+padding: 1rem;
+}
 
-                html, body{
-                    background-image: none;
-                }
-        }
+.btn{
+border-radius:20px;
+background-color:#FFB20C;
+color: white;
+}
+.btn:hover{
+    color: white;
+    filter:brightness(80%)
+}
 
-        @media screen and (min-width: 576px) and (max-width:767px){
-            .top-right{
-                padding-left: 10rem;
-                padding-right:0;
-                }
 
-                .links > a {
-                color: black;
-                padding: 0 5px;
-                }
-                .title{
-                    font-size: 3.5rem;
-                    margin-top:23rem;
-                    padding-top: 13rem;
-                }
-                
-                .column.iconify{
-                    flex-direction: row;
-                align-content:center;
-                }
+.image{
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    max-width: 900px;
+}
 
-                html, body{
-                    background-image: none;
-                }
-        }           
-        @media screen and (min-width: 768px) and (max-width:991px){
-            .title{
-                    font-size: 3.5rem;
-                    margin-left: 1rem;
-                    margin-top: 15rem;
-                }
 
-                .links > a {
-                color: black;
-                padding: 0 10px;
-                }
 
-            #register_container{
-                margin-top: 5rem;
-            }
+.list{
+padding-top: 10rem;
+padding-bottom: 10rem;
+}
 
-            html, body{
-                background-size: cover;
-                }
-        }       
+
+
+
+
+    /* media query */
+    @media screen and (max-width: 480px){
+    .top-right{
+    padding-left: 10rem;
+    padding-right:0;
+    }
+
+    .links > a {
+    color: black;
+    padding: 0 5px;
+    }
+    .title{
+        font-size: 3.5rem;
+        margin-top:18rem;
+        padding-top: 10rem;
+    }
+    
+    .column.iconify{
+        flex-direction: row;
+    align-content:center;
+    }
+
+    .container-fluid{
+        padding: 0px;
+    }
+
+    .hero-section{
+        background-image: none;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 481px) and (max-width:575px){
+.top-right{
+    padding-left: 10rem;
+    padding-right:0;
+    }
+
+    .links > a {
+    color: black;
+    padding: 0 5px;
+    }
+    .title{
+        font-size: 3.5rem;
+        margin-top:18rem;
+        padding-top: 10rem;
+    }
+    
+    .column.iconify{
+        flex-direction: row;
+    align-content:center;
+    }
+
+    .hero-section{
+        background-image: none;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width:767px){
+.top-right{
+    padding-left: 10rem;
+    padding-right:0;
+    }
+
+    .links > a {
+    color: black;
+    padding: 0 5px;
+    }
+    .title{
+        font-size: 3.5rem;
+        margin-top:10rem;
+        padding-top: 12rem;
+    }
+    
+    .column.iconify{
+        flex-direction: row;
+    align-content:center;
+    }
+
+    .hero-section{
+        background-image: none;
+    }
+}           
+@media screen and (min-width: 768px) and (max-width:991px){
+.title{
+        font-size: 3.5rem;
+        margin-left: 1rem;
+    }
+
+    .links > a {
+    color: black;
+    padding: 0 10px;
+    }
+
+    .hero-section{
+    background-size: cover;
+    }
+}
         </style>
     </head>
     <body>
-        
-        <div class="flex-center position-ref full-height">
-            
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    <a href="{{url('/admin/login')}}" class="text-light">Admin Login</a>
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}"></a>
-                        <a href="{{ route('register') }}"></a>
-                    @endauth
-                </div>
-            @endif
-
+        <section class="hero-section">
+            {{-- <img src="../images/online-payments.png" alt="online payment" class="image"> --}}
+            <div class="flex-center position-ref full-height">
+                
+                @if (Route::has('login'))
+                    <div class="top-right links">
+                        <a href="{{url('/admin/login')}}" class="text-light">Admin Login</a>
+                        @auth
+                            <a href="{{ url('/home') }}" class="text-light">Home</a>
+                        @else
+                            <a href="{{ route('login') }}"></a>
+                            <a href="{{ route('register') }}"></a>
+                        @endauth
+                    </div>
+                @endif
+    
+           
+                    <div class="container mt-5">
+                        <div class="row mt-5 mb-5">
+                          <div class="col-xs col-sm col-md-4 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="title m-b-md text-center mb-0">
+                        MERALCA
+    
+                    </div>
+                    <div class="sub m-b-md text-center ">
+                        
+                        <div class="row">
+                        <h1 class="sub fw-bold text-center mb-3">Powering your homes <span class="hours">24/7</span></h1>
+                        </div>
+                        <div class="row">
+                            <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl mb-3">
+                            <span class="iconify display-5" data-icon="akar-icons:thunder"></span>
+                        </div>
+                        <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl mb-3">
+                            <span class="iconify display-5" data-icon="entypo:light-bulb"></span>
+                        </div>
+                       <div class="iconify col-xs col-sm col-md col-lg col-xl col-xxl mb-3">
+                            <span class="iconify display-5" data-icon="simple-line-icons:paypal"></span>
+                       </div>
+                    </div> 
+                    
+                    </div>
+                          </div>
        
-                <div class="container mt-5">
-                    <div class="row mt-5 mb-5">
-                      <div class="col-xs col-sm col-md-4 col-lg-6 col-xl-6 col-xxl-6">
-                <div class="title m-b-md text-center d-flex align-items-center">
-                    MERALCA
-                    <h3 class="sub fw-bold text-center">Powering your homes <span class="hours">24/7</span></h3>
-                      <div class="row">
-                        <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                            <span class="iconify" data-icon="akar-icons:thunder"></span>
-                            </div>
-                            <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                           <span class="iconify" data-icon="entypo:light-bulb"></span>
-                           </div>
-                           <div class="col-xs col-sm col-md col-lg col-xl col-xxl">
-                           <span class="iconify" data-icon="simple-line-icons:paypal"></span>
-                           </div>
-                </div>
-                </div>
-                      </div>
+   
                       <div class="col-xs col-sm col-md-8 col-lg-6 col-xl-6 col-xxl-6  mb-5">
 
                         <div class="container" id="register_container">
@@ -372,6 +419,7 @@
                         </div>
                     </div> 
     </div>
-      
+</section>
+
     </body>
 </html>
