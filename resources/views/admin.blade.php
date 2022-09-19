@@ -2,6 +2,7 @@
 {{-- @extends('layouts.sidebar') --}}
 
 <style>
+
   div.card{
     border-radius: 20px;
   }
@@ -23,9 +24,22 @@
     border-radius: 10px;
   }
 
-/* .rate{
-color:#F15623;
+
+/* .section{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 } */
+
+
                /* media query */
  @media screen and (max-width: 480px){
 
@@ -34,27 +48,6 @@ color:#F15623;
   }
 }
 
-
-<style>
-        #navbar-brand{
-            color:#0072CE;
-            font-weight: 900; 
-        }
-
-        #nav-link{
-            color:#6A7C92;
-            margin-left: 10px;
-        }
-
-
-        body {
-  background-color: #fbfbfb;
-}
-@media (min-width: 991.98px) {
-  main {
-    padding-left: 240px;
-  }
-}
 
 /* Sidebar */
 .sidebar {
@@ -88,6 +81,12 @@ color:#F15623;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
+
+@media screen and (min-width: 768px) and (max-width:991px){
+#position{
+  margin-left: 10rem;
+}
+}
 </style>
 
 
@@ -111,10 +110,9 @@ color:#F15623;
     </nav>
     <!-- Sidebar -->
 
-
-<div class="container mt-5 pt-5 mb-5 pb-5">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+<section class="section">
+<div class="container mt-5 pt-5 mb-5 pb-5" id="container">
+        <div class="col-xs col-sm col-md-8 col-md-offset-2 col-lg col-xl col-xxl" id="position">
             <div class="card shadow text-reset">
                 <div class="card-header">
                   <div class="card-title h3 my-2 text-center fw-bold"><span style="color:#0072CE;">Welcome</span>, {{ Auth::user()->name }}!</div>
@@ -232,4 +230,5 @@ color:#F15623;
         </div>
     </div>
 </div>
+</section>
 @endsection
