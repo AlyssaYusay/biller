@@ -31,7 +31,7 @@
 
         <!-- Styles -->
         <style>
-           html, body {
+           .hero-section{
                 background-color: #0072CE;
                 background-image: url("../images/online-payments.png");
                 color: black;
@@ -148,6 +148,18 @@
                 left: 1px;
                 max-width: 900px;
             }
+
+
+
+    .list{
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+
+
+    
+
+
                 /* media query */
                 @media screen and (max-width: 480px){
                 .top-right{
@@ -174,11 +186,14 @@
                     padding: 0px;
                 }
 
-                html, body{
+                .hero-section{
                     background-image: none;
                 }
         }
 
+
+
+       
 
         @media screen and (min-width: 481px) and (max-width:575px){
             .top-right{
@@ -201,7 +216,7 @@
                 align-content:center;
                 }
 
-                html, body{
+                .hero-section{
                     background-image: none;
                 }
         }
@@ -227,7 +242,7 @@
                 align-content:center;
                 }
 
-                html, body{
+                .hero-section{
                     background-image: none;
                 }
         }           
@@ -242,7 +257,7 @@
                 padding: 0 10px;
                 }
 
-                html, body{
+                .hero-section{
                 background-size: cover;
                 }
         }
@@ -250,7 +265,7 @@
     </head>
     <body>
         
-
+<section class="hero-section">
         {{-- <img src="../images/online-payments.png" alt="online payment" class="image"> --}}
         <div class="flex-center position-ref full-height">
             
@@ -373,6 +388,59 @@
                 </div>
         </div>
     </div>
-      
+</section>
+
+
+<section class="list">
+    <h1 class="text-center text-dark mb-5">Have the power to access your Meralca account wherever, whenever with</h1>
+    <div class="container text-center" id="box">
+       <div class="row">
+            
+           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
+               <div class="card border-light">
+                  <a href="editor.html"><img src="../images/paybills.png" height="150px" alt="" id="img"></a>
+                  <p class="text mt-2">View and Pay Bills</p>
+               </div>
+            </div>
+
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
+             <div class="card border-light">
+               <a href="#"><img src="../images/meralcometer.jpg" height="150px" alt="" id="img"></a>
+                <p class="text mt-2">Apply For New Service</p>
+             </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
+             <div class="card border-light">
+               <a href="#"><img src="../images/flashlight.png" height="120px" alt="" id="img" class="mt-2"></a>
+                <p class="text mt-4">Report an Outage</p>
+             </div>
+          </div>
+
+
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
+           <div class="card border-light">
+              <a href="#"><img src="../images/feedback.png" height="145px" alt="" id="img"></a>
+              <p class="text mt-2">Give Feedback</p>
+           </div>
+        </div>
+
+
+       </div>
+    </div>
+ </section>
+
+
+
+                        
+                        
+ <script type='text/javascript'>
+    (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'NnapDrn32MoApNs2t_c', {});
+</script>
+                
+                
+                
     </body>
 </html>
+
+

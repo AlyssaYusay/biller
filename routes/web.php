@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -35,21 +36,21 @@ Route::get('/home/paypal',function(){
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 
-Route::get('/admin/data','UserController@data')->name('data');
+Route::get('/admin/data','UserController@data')->name('data')->middleware(['auth']);
 
 Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
 
 Route::post('/admin/store','billController@store')->name('admin.store');
 Route::post('/admin/updaterate','billController@updaterate')->name('admin.updaterate');
 
-Route::get('/admin/data',function(){
-	return view('data');
-});
+// Route::get('/admin/data',function(){
+// 	return view('data');
+// });
 
 
 Route::post('/home/pdf','billController@pdf')->name('home.pdf');
 
-Route::post('/login', 'Auth\LoginController@login')->name('admin.login');
+Route::post('/login', 'Auth\LoginController@login')->name('user.login');
 
 
 

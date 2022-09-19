@@ -55,7 +55,7 @@
                 {{-- <div class="navbar-header"> --}}
                      <!-- Branding Image -->
                      <span class="iconify" data-icon="ant-design:thunderbolt-twotone" style="color:#FFB20C;"></span><a class="navbar-brand" id="navbar-brand" href="/">
-                        {{ config('app.name', 'Laravel') }}
+                        MERALCA
                     </a>
 
                     <!-- Collapsed Hamburger -->
@@ -109,7 +109,6 @@
             </div>
         </nav>
 
-        
         @yield('content')
     </div>
 
