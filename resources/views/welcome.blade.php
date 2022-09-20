@@ -542,14 +542,7 @@ padding-bottom: 5rem;
           data-mdb-ripple-color="dark"
           ><i class="fab fa-linkedin"></i
         ></a>
-        <!-- Github -->
-        <a
-          class="btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-github"></i
-        ></a>
+        
       </section>
       <!-- Section: Social media -->
     </div>
