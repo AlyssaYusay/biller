@@ -26,8 +26,7 @@
 
 html,
 body {
-    background-color: #000;
-    font-family: 'Raleway', sans-serif;
+    background-color: white;   
     font-weight: 700;
     height: 100vh;
     margin: 0;
@@ -38,3 +37,5 @@ body {
     text-decoration: none;
     background-color: #7070706b;
 }
+
+

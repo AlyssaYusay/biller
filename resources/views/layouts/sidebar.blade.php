@@ -57,6 +57,15 @@
                      <span class="iconify" data-icon="ant-design:thunderbolt-twotone" style="color:#FFB20C;"></span><a class="navbar-brand" id="navbar-brand" href="/">
                         MERALCA
                     </a>
+                    {{-- sidebar menu --}}
+                    <button
+                    class="navbar-toggler text-dark ms-auto"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebarMenu"
+                 >
+                 <i class="fa-solid fa-bars-staggered"></i>
+                 </button>
                     
                     <!-- Collapsed Hamburger -->
                     <button

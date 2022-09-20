@@ -1,12 +1,113 @@
-@extends('layouts.app')
+
+@extends('layouts.sidebar')
+
+<style>
+
+  div.card{
+    border-radius: 20px;
+  }
+
+  .border{
+    border-radius: 10px;
+  }
+
+  #btn{
+   border-radius:20px;
+  background-color:#FFB20C;
+  color: white;
+}
+  #btn:hover{
+  color: white;
+  filter:brightness(80%)
+}
+  .form-select{
+    border-radius: 10px;
+  }
+
+
+.section{
+padding-top:10rem;
+padding-bottom:5rem;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  z-index: 600;
+  background-color: transparent;
+  shadow: none;
+}
+
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+
+nav#sidebarMenu{
+  width:200px;
+}
+
+.position-sticky {
+  position: relative;
+  top: 0;
+  width:200px;
+  padding-top: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+
+ /* media query */
+@media screen and (max-width: 480px){
+
+p.current{
+  font-size: 1.5rem;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width:991px){
+#position{
+  margin-left: 10rem;
+}
+}
+</style>
+
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="card rounded-0 shadow text-reset">
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse" style="box-shadow: none;">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-money-bill fa-fw me-3"></i><span>Create Bill</span></a
+        >
+          <a href="{{url('/admin/data')}}" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-users fa-fw me-3"></i><span>Customers</span></a
+        >
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+            ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Bills</span></a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+
+<section class="section">
+<div class="container mb-5 pb-5" id="container">
+        <div class="col-xs col-sm col-md-8 col-md-offset-2 col-lg col-xl col-xxl" id="position">
+            <div class="card shadow text-reset">
                 <div class="card-header">
-                  <div class="card-title h3 my-2 text-center fw-bold">Welcome, {{ Auth::user()->name }}!</div>
+                  <div class="card-title h3 my-2 text-center fw-bold"><span style="color:#0072CE;">Welcome</span>, {{ Auth::user()->name }}!</div>
                 </div>
 
                 <div class="card-body">
@@ -27,20 +128,20 @@
                         <div class="container-fluid">
                         <!-- Text input-->
                         <div class="mb-3">
-                          <label class="control-label" for="customerId">Customer Id</label>  
+                          <label class="control-label" for="customerId">Customer ID</label>  
                           <input id="customerId" name="customerId" placeholder="" class="form-control rounded-0" required="" type="text">
                         </div>
 
                         <!-- Text input-->
                         <div class="mb-3">
                           <label class="control-label" for="initial">Initial Reading</label>  
-                          <input id="initial" name="initial" placeholder="" class="form-control rounded-0 text-end" required="" type="number" step="any">
+                          <input id="initial" name="initial" placeholder="kwh" class="form-control rounded-0 text-end" required="" type="number" step="any">
                         </div>
 
                         <!-- Text input-->
                         <div class="mb-3">
                           <label class="control-label" for="final">Final Reading</label>  
-                          <input id="final" name="final" placeholder="" class="form-control rounded-0 text-end" required="" type="number" step="any">
+                          <input id="final" name="final" placeholder="kwh" class="form-control rounded-0 text-end" required="" type="number" step="any">
                         </div>
 
                         <!-- Select Basic -->
@@ -85,7 +186,7 @@
                         <!-- Button -->
                         <div class="mb-3">
                           <div class="d-grid">
-                            <button type="submit" class="btn btn-primary bg-gradient rounded-0">Submit</button>
+                            <button type="submit" class="btn fw-bold" id="btn">Submit</button>
                           </div>
                         </div>
                         </div>
@@ -99,7 +200,7 @@
                               <!-- Form Name -->
                               <legend class="w-auto mx-3 px-4 border-0 mt-n4 h4 fw-bolder">Update Electricty Rate</legend>
                               <div class="container-fluid">
-                                <p class="current">Current Rate = <span>&#x20B1; {{ Auth::user()->rate }} </span></p>
+                                <p class="current">Current Rate = <span class="rate" style="color:#0072CE;">&#x20B1; {{ Auth::user()->rate }} </span></p>
                                 
                                 <!-- Text input-->
                                 <div class="mb-3">
@@ -109,7 +210,7 @@
                                 <!-- Button -->
                                 <div class="mb-3">
                                   <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary bg-gradient rounded-0">Update</button>
+                                    <button type="submit" class="btn fw-bold" id="btn">Update</button>
                                   </div>
                                 </div>
                               </div>
@@ -121,4 +222,5 @@
         </div>
     </div>
 </div>
+</section>
 @endsection

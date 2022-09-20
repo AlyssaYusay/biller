@@ -17,15 +17,38 @@ body>#app>.container{
    flex-shrink: 1;
    flex-grow: 1;
    display: flex;
-   align-items: center;
    justify-content: center
+}
+
+#btn{
+    background-color: #FFB20C;
+        border-radius: 10px;
+        color: white;
+    }
+
+    #btn:hover{
+    filter: brightness(80%)
+        color: white;
+    }
+  .border{
+    border-radius: 10px;
+  }
+
+  div#container{
+    padding-top: 15rem;
+  }
+
+
+  .card{
+    border-radius:20px;
+    padding: 3rem;
 }
 </style>
 @endsection
 @section('content')
-<div class="container">
+<div class="container" id="container">
     <div class="col-lg-5 col-md-6 col-sm-10 col-xs-12">
-        <div class="card rounded-0 shadow text-reset">
+        <div class="card shadow text-reset">
             <div class="card-header">
                 <div class="card-title h3 my-2 text-center fw-bolder">Reset Password</div>
             </div>
@@ -56,7 +79,7 @@ body>#app>.container{
 
                         <div class="mb-3">
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary bg-gradient rounded-0">
+                                <button type="submit" class="btn fw-bold" id="btn">
                                     Send Password Reset Link
                                 </button>
                             </div>

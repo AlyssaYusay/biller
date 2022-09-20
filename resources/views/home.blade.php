@@ -1,12 +1,90 @@
 @extends('layouts.app')
 
+
+<style>
+  /* div#app{
+    height: 100vh;
+
+  } */
+  #app{
+    background-color: white;
+  }
+
+  body{
+    background-color: white;
+  }
+
+  div.card{
+  border-radius: 20px;
+  }
+
+  .border{
+    border-radius: 10px;
+  }
+
+  #btn{
+    border-radius: 10px;
+    background-color: #FFB20C;
+    color: white;
+  }
+
+  #btn:hover{
+   color: white;
+    filter:brightness(80%)
+  }
+
+.btn{
+    border-radius: 10px;
+    background-color: #FFB20C;
+    color: white;
+  }
+
+  .btn:hover{
+   color: white;
+    filter:brightness(80%)
+  }
+  .form-select{
+    border-radius: 10px;
+  }
+ 
+.section{
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+/* media query */
+  @media screen and (max-width: 480px){
+p.current{
+  font-size: 1.5rem;
+}
+
+td{
+  margin:0px;
+}
+
+th{
+  margin:0px;
+}
+}
+
+
+@media screen and (min-width: 768px) and (max-width:991px){
+#position{
+  margin-left: 10rem;
+}
+}
+
+
+</style>
+
+
 @section('content')
-<div class="container">
+<section class="section">
+<div class="container mt-5 pt-5 mb-5 pb-5" >
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="card rounded-0 shadow text-reset">
+        <div class="col-xs col-sm col-md-8 col-md-offset-2" id="position">
+            <div class="card shadow text-reset">
                 <div class="card-header">
-                  <div class="card-title h3 my-2 text-center">Welcome, {{ Auth::user()->name }}!</div>
+                  <div class="card-title h3 my-2 text-center fw-bold"><span style="color:#0072CE;">Welcome</span>, {{ Auth::user()->name }}!</div>
                 </div>
 
                 <div class="card-body">
@@ -61,7 +139,7 @@
                         <div class="row justify-content-center">
                           <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
                             <div class="d-grid">
-                              <a href="{{url('/home/pay')}}" class="btn btn-primary rounded-pill px-4"> Pay</a>
+                              <a href="{{url('/home/paypal')}}" class="btn px-4 fw-bold" id="btn"> Pay</a>
                             </div>
                           </div>
                         </div>
@@ -107,7 +185,7 @@
                             <!-- Select Basic -->
                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
                               <label class=" control-label" for="month">Month</label>
-                              <select id="month" name="month" class="form-select rounded-0">
+                              <select id="month" name="month" class="form-select">
                                 <option value="January">January</option>
                                 <option value="February">February</option>
                                 <option value="March">March</option>
@@ -126,7 +204,7 @@
                             <!-- Select Basic -->
                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
                               <label class=" control-label" for="year">Year</label>
-                              <select id="year" name="year" class="form-select rounded-0">
+                              <select id="year" name="year" class="form-select">
                                 @php
                                 for($i= (date("Y") - 20); $i < (date("Y") + 5); $i++ ):
                                 $year = $i;
@@ -141,7 +219,7 @@
                             <!-- Button -->
                               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
                                 <div class="d-grid">
-                                  <button type="submit" class="btn btn-primary btn-sm rounded-0 bg-gradient">Download</button>
+                                  <button type="submit" class="btn btn-sm fw-bold" id="btn">Download</button>
                                 </div>
                               </div>
   
@@ -156,4 +234,10 @@
         </div>
     </div>
 </div>
+</section>
 @endsection
+
+
+<script type='text/javascript'>
+  (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'NnapDrn32MoApNs2t_c', {});
+</script>
