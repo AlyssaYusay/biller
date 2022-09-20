@@ -57,6 +57,51 @@
             color:white;
         }
 
+ /* media query */
+ @media screen and (max-width: 480px){
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+    }
+ }
+
+ @media screen and (min-width: 481px) and (max-width:575px){
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+    }
+ }
+
+ @media screen and (min-width: 576px) and (max-width:767px){
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+    }
+ }
+
+ @media screen and (min-width: 768px) and (max-width:991px){
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+    }
+ }
+
     </style>
 </head>
 <body>
@@ -129,19 +174,13 @@
 
   {{-- </footer> --}}
   <div class="container-fluid" style="background-color: #f1f1f1;">
-    <footer class="container py-5">
-        <div class="row text-dark">
+    <footer class="container py-5" id="footer">
+        <div class="row text-dark" id="footer-row">
             <div class="col-lg-3">
                 <h3>Contact Us:</h3>
-                <ul class="nav">
-                    <li class="nav-item mb-2">0009-001-0123</li>
-                </ul>
-               
-              
+                   <p>0009-001-0123</p>
                 <h3>Email:</h3>
-                <ul class="nav">
-                <li class="nav-item mb-2">meralca.support@help.com</li>
-            </ul>
+               <p>meralca.support@help.com</p>
         </div>
                
           

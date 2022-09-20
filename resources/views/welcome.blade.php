@@ -216,6 +216,15 @@ padding-bottom: 5rem;
        padding-top: 1rem;
     }
 
+
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+    }
 }
 
 
@@ -246,6 +255,15 @@ padding-bottom: 5rem;
     #request-button{
        padding-top: 1rem;
     }
+
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+    }
 }
 
 
@@ -275,19 +293,21 @@ padding-bottom: 5rem;
         background-image: none;
     }
 
-    /* .banner{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content:center;
-    } */
     .request-button{
         font-size: .8rem;
     }
 
     #request-button{
        padding-top: 3rem;
+    }
+
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
     }
 }           
 @media screen and (min-width: 768px) and (max-width:991px){
@@ -307,6 +327,15 @@ padding-bottom: 5rem;
 
     #request-button{
        padding-top: 3rem;
+    }
+
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
     }
 }
     </style>
@@ -503,30 +532,24 @@ padding-bottom: 5rem;
 
 
   {{-- </footer> --}}
-  <div class="container-fluid" style="background-color: white;">
-        <footer class="container py-5">
-            <div class="row text-dark">
+  <div class="container-fluid ms-auto" style="background-color: white;">
+        <footer class="container py-5" id="footer">
+            <div class="row text-dark" id="footer-row">
                 <div class="col-lg-3">
                     <h3>Contact Us:</h3>
-                    <ul class="nav">
-                        <li class="nav-item mb-2">0009-001-0123</li>
-                    </ul>
-                   
-                  
+                       <p>0009-001-0123</p>
                     <h3>Email:</h3>
-                    <ul class="nav">
-                    <li class="nav-item mb-2">meralca.support@help.com</li>
-                </ul>
+                   <p>meralca.support@help.com</p>
             </div>
                    
               
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                     <h3>About Meralca</h3>
                     <p>is a private sector electric distribution utility company in the Philippines covering 10 cities and 5 municipalities. Meralca celebrates 10 years of service in 2022, committed to providing reliable and affordable energy.
                     </p>
                     
                 </div>
-                <div class="col-lg-4 offset-1">
+                <div class="col-lg-4">
                 <form action="../send.php" method="post">
                         <h3>Subscribe to our newsletter</h3>
                         <p>Get latest news from Meralca</p>
