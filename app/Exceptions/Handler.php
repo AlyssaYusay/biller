@@ -23,7 +23,12 @@ class Handler extends ExceptionHandler
      * @var array<int, class-string<\Throwable>>
      */
     protected $dontReport = [
-        //
+        \Illuminate\Auth\AuthenticationException::class,
+        \Illuminate\Auth\Access\AuthorizationException::class,
+        \Symfony\Component\HttpKernel\Exception\HttpException::class,
+        \Illuminate\Database\Eloquent\ModelNotFoundException::class,
+        \Illuminate\Session\TokenMismatchException::class,
+        \Illuminate\Validation\ValidationException::class,
     ];
 
     /**
@@ -57,7 +62,7 @@ class Handler extends ExceptionHandler
         }
         $guard = array_get($exception->guards(), 0);
 
-        switch (guard){
+        switch ($guard){
             case 'admin';
             $login = 'admin.login';
             break;
@@ -67,6 +72,6 @@ class Handler extends ExceptionHandler
             break;
         }
 
-        return redirect()->guest(route('login'));
+        return redirect()->guest(route($login));
     }
 }

@@ -173,7 +173,7 @@
 
 
   {{-- </footer> --}}
-  <div class="container-fluid" style="background-color: #f1f1f1;">
+  <div class="container-fluid shadow" style="background-color: #f1f1f1;">
     <footer class="container py-5" id="footer">
         <div class="row text-dark" id="footer-row">
             <div class="col-lg-3">

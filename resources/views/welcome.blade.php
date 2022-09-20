@@ -515,7 +515,7 @@ padding-bottom: 5rem;
 
 
 
-<section class="banner">
+<section class="banner shadow">
     <div class="container" id="banner_container">
         <div class="row">
             <div class="col-xs col-sm col-md col-lg col-xl-8 col-xxl-8 text-center">
@@ -532,7 +532,7 @@ padding-bottom: 5rem;
 
 
   {{-- </footer> --}}
-  <div class="container-fluid ms-auto" style="background-color: white;">
+  <div class="container-fluid ms-auto shadow" style="background-color: white;">
         <footer class="container py-5" id="footer">
             <div class="row text-dark" id="footer-row">
                 <div class="col-lg-3">
@@ -564,8 +564,7 @@ padding-bottom: 5rem;
                 </div>
             </div>
             <hr>
-        </div>
-            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
+            <div class="text-center">
                 <p>&copy; 2022 Copyright: Meralca.com</p>
             </div>
         </footer>
