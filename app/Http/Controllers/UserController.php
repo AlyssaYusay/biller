@@ -38,6 +38,7 @@ class UserController extends Controller
         $user = User::find($request->user_id);
         $user->customerId = $request->customerId;
         $user->name = $request->name;
+        $user->address = $request->address;
        
         $user->save();
 

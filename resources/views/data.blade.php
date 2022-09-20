@@ -160,7 +160,11 @@ p.current{
                         Name
                     </div>
                 </th>
-        
+                <th class="">
+                  <div class="d-flex justify-content-center">
+                      Address
+                  </div>
+              </th>
                 <th class="">
                     <div class="d-flex justify-content-center">
                         Actions
@@ -176,14 +180,20 @@ p.current{
                     {{ $user->customerId }}
                 </td>
                 <td class="text-gray-700 whitespace-nowrap">{{ $user->name }}</td>
- 
+                <td class="text-gray-700 whitespace-nowrap">{{ $user->address }}</td>
                 <td>
                     <form id="form" onsubmit="return confirm('Do you really want to delete this user?');"
                         action="{{ route('deleteuser') }}" method="post">
 
                         {{-- check if we have delete user route --}}
                         @csrf
-                       
+
+                      {{-- actions --}}
+
+                        <a href="{{ url('/admin/userbill/'.$user->id) }}"
+                          class="update text-decoration-none fw-bold">
+                          View
+                      </a>
                         <a href="{{ url('/admin/userupdate/'.$user->id) }}"
                             class="update text-decoration-none fw-bold">
                             Update

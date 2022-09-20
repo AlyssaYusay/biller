@@ -76,7 +76,7 @@ p.current{
 
 input{
   height: 3rem;
-  width: 30rem;
+  width: 32rem;
   margin: 1rem;
 
 }
@@ -118,6 +118,13 @@ input{
         </span>
         <input value="{{ $user->name }}" class="w-full p-0 text-sm border-none focus:ring-0" id="name" name="name" type="name" required />
     </label>
+    
+    <label class="mt-3 relative block p-3 border-2 border-gray-200 rounded-lg" for="address">
+      <span class="text-xs font-medium text-gray-500" for="address">
+         Address
+      </span>
+      <input value="{{ $user->address }}" class="w-full p-0 text-sm border-none focus:ring-0" id="address" name="address" type="address" required />
+  </label>
     <button type="submit"
         class="btn fw-bold"
         id="btn"
