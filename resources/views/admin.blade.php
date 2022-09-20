@@ -27,7 +27,7 @@
 
 .section{
 padding-top:10rem;
-padding-bottom:5rem;
+padding-bottom:10rem;
 }
 
 

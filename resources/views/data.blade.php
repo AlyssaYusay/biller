@@ -41,10 +41,22 @@
     .update:hover{
          color: white;
          filter:brightness(80%)
-         text-decoration: none;
+        
       }
 
+      .view{
+        padding: .8rem 1.2rem;
+        background-color: orange;
+        color: white;
+        border-radius: 20px;
+        margin-right: 1rem;
+    }
 
+    .view:hover{
+         color: white;
+         filter:brightness(80%)
+    
+      }
     #form{
         display: flex;
         justify-content: center;
@@ -191,7 +203,7 @@ p.current{
                       {{-- actions --}}
 
                         <a href="{{ url('/admin/userbill/'.$user->id) }}"
-                          class="update text-decoration-none fw-bold">
+                          class="view text-decoration-none fw-bold">
                           View
                       </a>
                         <a href="{{ url('/admin/userupdate/'.$user->id) }}"

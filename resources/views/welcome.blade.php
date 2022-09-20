@@ -557,7 +557,7 @@ padding-bottom: 5rem;
                             <label for="newsletter1" class="visually-hidden">Email address</label>
                             <input id="newsletter1" type="text" class="form-control me-2 "  name="emailadd"
                                 placeholder="Email address">
-                            <button type="submit" class="btn " name="subscribeExpl">Subscribe</button>
+                            <button type="submit" class="btn btn-md" name="subscribeExpl">Subscribe</button>
                             
                         </div>
                     </form>
