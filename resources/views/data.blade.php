@@ -45,7 +45,7 @@
       }
 
 
-    form{
+    #form{
         display: flex;
         justify-content: center;
       }
@@ -178,7 +178,7 @@ p.current{
                 <td class="text-gray-700 whitespace-nowrap">{{ $user->name }}</td>
  
                 <td>
-                    <form onsubmit="return confirm('Do you really want to delete this user?');"
+                    <form id="form" onsubmit="return confirm('Do you really want to delete this user?');"
                         action="{{ route('deleteuser') }}" method="post">
 
                         {{-- check if we have delete user route --}}

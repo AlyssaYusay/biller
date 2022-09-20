@@ -502,75 +502,24 @@ padding-bottom: 5rem;
 </section>
 
 
-
-
-<footer class="text-center text-dark p-5" style="background-color: rgba(0, 0, 0, 0.2);">
-        <h4 class="pb-5">Get the latest news and service advisories from Meralca.</h4>
-   
-        <!-- Twitter -->
-        <a
-          class="btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-twitter"></i
-        ></a>
-  
-        <!-- Google -->
-        <a
-          class="btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-google"></i
-        ></a>
-  
-        <!-- Instagram -->
-        <a
-          class="btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-instagram"></i
-        ></a>
-  
-        <!-- Linkedin -->
-        <a
-          class="btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        
-      </section>
-      <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <!-- <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
-      © 2022 Copyright:
-      <a style="color:
-      #6A7C92">Meralca.com</a>
-    </div> -->
-    <!-- Copyright -->
-  </footer>
-  <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.2); ">
+  {{-- </footer> --}}
+  <div class="container-fluid" style="background-color: white;">
         <footer class="container py-5">
             <div class="row text-dark">
                 <div class="col-lg-3">
                     <h3>Contact Us:</h3>
                     <ul class="nav">
-                        <li class="nav-item mb-2">0009-001-0123 <br/> 0009-001-0124 <br/> 0009-001-0125</li>
-                       
-                        
+                        <li class="nav-item mb-2">0009-001-0123</li>
                     </ul>
-                    <h3 class="pt-3">or Email Us at</h3>
+                   
+                  
+                    <h3>Email:</h3>
                     <ul class="nav">
                     <li class="nav-item mb-2">meralca.support@help.com</li>
-                    </ul>
-                </div>
+                </ul>
+            </div>
+                   
+              
                 <div class="col-lg-4">
                     <h3>About Meralca</h3>
                     <p>is a private sector electric distribution utility company in the Philippines covering 10 cities and 5 municipalities. Meralca celebrates 10 years of service in 2022, committed to providing reliable and affordable energy.
@@ -591,8 +540,10 @@ padding-bottom: 5rem;
                     </form>
                 </div>
             </div>
-            <div class="d-flex justify-content-between py-4 my-4 border-top">
-                <p>&copy; 2022 Copyright: <a style="color: #6A7C92">Meralca.com</a></p>
+            <hr>
+        </div>
+            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
+                <p>&copy; 2022 Copyright: Meralca.com</p>
             </div>
         </footer>
 
