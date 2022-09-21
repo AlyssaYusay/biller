@@ -524,7 +524,7 @@ padding-bottom: 5rem;
             
            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
                <div class="card border-dark">
-                  <a href="editor.html"><img src="../images/create&log.png" height="250px" alt="" id="img"></a>
+                  <a href="../images/create&log.png"><img src="../images/create&log.png" height="250px" alt="" id="img"></a>
                   <p class="text mt-2">Register & Log-In your Account</p>
                </div>
             </div>
@@ -538,7 +538,7 @@ padding-bottom: 5rem;
 
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
              <div class="card border-dark">
-               <a href="#"><img src="../images/download.png" height="223px" alt="" id="img" class="mt-2"></a>
+               <a href="../images/download.png"><img src="../images/download.png" height="223px" alt="" id="img" class="mt-2"></a>
                 <p class="text mt-4">Download the PDF File</p>
              </div>
           </div>
