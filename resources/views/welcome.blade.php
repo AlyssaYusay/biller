@@ -39,7 +39,7 @@
     background-color: #0072CE;
     background-image: url("../images/online-payments.png");
     color: black;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
     font-weight: 600;
     height: 100vh;
     background-size: contain;
