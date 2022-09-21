@@ -221,6 +221,15 @@ padding-bottom: 5rem;
        padding-top: 1rem;
     }
 
+
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+    }
 }
 
 
@@ -251,6 +260,15 @@ padding-bottom: 5rem;
     #request-button{
        padding-top: 1rem;
     }
+
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+    }
 }
 
 
@@ -280,19 +298,21 @@ padding-bottom: 5rem;
         background-image: none;
     }
 
-    /* .banner{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content:center;
-    } */
     .request-button{
         font-size: .8rem;
     }
 
     #request-button{
        padding-top: 3rem;
+    }
+
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
     }
 }           
 @media screen and (min-width: 768px) and (max-width:991px){
@@ -312,6 +332,15 @@ padding-bottom: 5rem;
 
     #request-button{
        padding-top: 3rem;
+    }
+
+    #footer-row{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
     }
 }
     </style>
@@ -523,7 +552,7 @@ padding-bottom: 5rem;
 
 
 
-<section class="banner">
+<section class="banner shadow">
     <div class="container" id="banner_container">
         <div class="row">
             <div class="col-xs col-sm col-md col-lg col-xl-8 col-xxl-8 text-center">
@@ -539,82 +568,25 @@ padding-bottom: 5rem;
 </section>
 
 
-
-
-<footer class="text-center text-dark p-5" style="background-color: rgba(0, 0, 0, 0.2);">
-        <h4 class="pb-5">Get the latest news and service advisories from Meralca.</h4>
-   
-        <!-- Twitter -->
-        <a
-          class="btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-twitter"></i
-        ></a>
-  
-        <!-- Google -->
-        <a
-          class="btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-google"></i
-        ></a>
-  
-        <!-- Instagram -->
-        <a
-          class="btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-instagram"></i
-        ></a>
-  
-        <!-- Linkedin -->
-        <a
-          class="btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        
-      </section>
-      <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <!-- <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
-      © 2022 Copyright:
-      <a style="color:
-      #6A7C92">Meralca.com</a>
-    </div> -->
-    <!-- Copyright -->
-  </footer>
-  <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.2); ">
-        <footer class="container py-5">
-            <div class="row text-dark">
+  {{-- </footer> --}}
+  <div class="container-fluid ms-auto shadow" style="background-color: white;">
+        <footer class="container py-5" id="footer">
+            <div class="row text-dark" id="footer-row">
                 <div class="col-lg-3">
                     <h3>Contact Us:</h3>
-                    <ul class="nav">
-                        <li class="nav-item mb-2">0009-001-0123 <br/> 0009-001-0124 <br/> 0009-001-0125</li>
-                       
-                        
-                    </ul>
-                    <h3 class="pt-3">or Email Us at</h3>
-                    <ul class="nav">
-                    <li class="nav-item mb-2">meralca.support@help.com</li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
+                       <p>0009-001-0123</p>
+                    <h3>Email:</h3>
+                   <p>meralca.support@help.com</p>
+            </div>
+                   
+              
+                <div class="col-lg-5">
                     <h3>About Meralca</h3>
                     <p>is a private sector electric distribution utility company in the Philippines covering 10 cities and 5 municipalities. Meralca celebrates 10 years of service in 2022, committed to providing reliable and affordable energy.
                     </p>
                     
                 </div>
-                <div class="col-lg-4 offset-1">
+                <div class="col-lg-4">
                 <form action="../send.php" method="post">
                         <h3>Subscribe to our newsletter</h3>
                         <p>Get latest news from Meralca</p>
@@ -622,14 +594,15 @@ padding-bottom: 5rem;
                             <label for="newsletter1" class="visually-hidden">Email address</label>
                             <input id="newsletter1" type="text" class="form-control me-2 "  name="emailadd"
                                 placeholder="Email address">
-                            <button type="submit" class="btn " name="subscribeExpl">Subscribe</button>
+                            <button type="submit" class="btn btn-md" name="subscribeExpl">Subscribe</button>
                             
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="d-flex justify-content-between py-4 my-4 border-top">
-                <p>&copy; 2022 Copyright: <a style="color: #6A7C92">Meralca.com</a></p>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2022 Copyright: Meralca.com</p>
             </div>
         </footer>
 

@@ -27,7 +27,7 @@
 
 .section{
 padding-top:10rem;
-padding-bottom:5rem;
+padding-bottom:10rem;
 }
 
 
@@ -94,9 +94,9 @@ p.current{
           <a href="{{url('/admin/data')}}" class="list-group-item list-group-item-action py-2 ripple"
           ><i class="fas fa-users fa-fw me-3"></i><span>Customers</span></a
         >
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          {{-- <a href="#" class="list-group-item list-group-item-action py-2 ripple"
             ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Bills</span></a
-          >
+          > --}}
         </div>
       </div>
     </nav>

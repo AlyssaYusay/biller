@@ -74,12 +74,13 @@ p.current{
 }
 }
 
-input{
-  height: 3rem;
-  width: 30rem;
-  margin: 1rem;
-
+#form-update{
+width: 60%;
 }
+
+
+
+
 </style>
 
 
@@ -94,36 +95,32 @@ input{
             <a href="{{url('/admin/data')}}" class="list-group-item list-group-item-action py-2 ripple"
             ><i class="fas fa-users fa-fw me-3"></i><span>Customers</span></a
           >
-            <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+            {{-- <a href="#" class="list-group-item list-group-item-action py-2 ripple"
               ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Bills</span></a
-            >
+            > --}}
           </div>
         </div>
       </nav>
       <!-- Sidebar -->
 
 <div class="container" id="container">
-<form action="{{ route('updateuser') }}" method="POST">
+<form action="{{ route('updateuser') }}" method="POST" id="form-update">
 @csrf
-    <label class="relative block p-3 border-2 border-gray-200 rounded-lg" for="customerId">
-        <span class="text-xs font-medium text-gray-500" for="customerId">
-            Customer ID
-        </span>
-        <input type="hidden" value="{{ $user->id }}" name="user_id" />
-        <input value="{{ $user->customerId }}" class="w-full p-0 text-sm border-none focus:ring-0" id="customerId" name="customerId" type="text" required />
-    </label>
-    <label class="mt-3 relative block p-3 border-2 border-gray-200 rounded-lg" for="name">
-        <span class="text-xs font-medium text-gray-500" for="name">
-            Name
-        </span>
-        <input value="{{ $user->name }}" class="w-full p-0 text-sm border-none focus:ring-0" id="name" name="name" type="name" required />
-    </label>
-    <button type="submit"
-        class="btn fw-bold"
-        id="btn"
-        data-rounded="rounded-md">
-        Update User
-    </button>
+  <div class="mb-3">
+    <label for="customerId" class="form-label">Customer ID</label>
+    <input type="hidden" value="{{ $user->id }}" name="user_id" />
+    <input value="{{ $user->customerId }}" class="form-control" id="customerId" name="customerId" type="text" required />
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input value="{{ $user->name }}" class="form-control" id="name" name="name" type="name" required />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="address">Address</label>
+    <input value="{{ $user->address }}" class="form-control" id="address" name="address" type="address" required />
+  </div>
+
+  <button type="submit" class="btn fw-bold" id="btn">Update User</button>
 </form>
 </div>
 @endsection
