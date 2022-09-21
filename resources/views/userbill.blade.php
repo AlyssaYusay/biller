@@ -1,4 +1,3 @@
-{{-- @extends('layouts.sidebar') --}}
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -56,70 +55,66 @@
             filter: brightness(80%)
             color:white;
         }
-    div#container{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        padding-top: 10rem;
-        padding-bottom: 20rem;
-    }
+  #app{
+    background-color: white;
+  }
 
-    div#app{
-        height: 100vh;
-    }
+  body{
+    background-color: white;
+  }
 
-    div#container#table{
-        padding: 0px;
-        border-radius: 20px;
-    }
-
-    #btn{
-         border-radius:20px;
-         background-color:#cf1b0e;
-         color: white;
-    }
-     #btn:hover{
-         color: white;
-         filter:brightness(80%)
-      }
-
-
-      /*  */
-    .update{
-        padding: .8rem 1rem;
-        background-color: #0072CE;
-        color: white;
-        border-radius: 20px;
-        margin-right: 1rem;
-    }
-
-    .update:hover{
-         color: white;
-         filter:brightness(80%)
-        
-      }
-
-      .view{
-        padding: .8rem 1.2rem;
-        background-color: orange;
-        color: white;
-        border-radius: 20px;
-        margin-right: 1rem;
-    }
-
-    .view:hover{
-         color: white;
-         filter:brightness(80%)
-    
-      }
-    #form{
-        display: flex;
-        justify-content: center;
-      }
-    
-.table{
+  div.card{
   border-radius: 20px;
+  }
+
+  .border{
+    border-radius: 10px;
+  }
+
+  #btn{
+    border-radius: 10px;
+    background-color: #FFB20C;
+    color: white;
+  }
+
+  #btn:hover{
+   color: white;
+    filter:brightness(80%)
+  }
+
+.btn{
+    border-radius: 10px;
+    background-color: #FFB20C;
+    color: white;
+  }
+
+  .btn:hover{
+   color: white;
+    filter:brightness(80%)
+  }
+  .form-select{
+    border-radius: 10px;
+  }
+ 
+.section{
+  padding-top: 5rem;
+  padding-bottom: 10rem;
 }
+/* media query */
+  @media screen and (max-width: 480px){
+p.current{
+  font-size: 1.5rem;
+}
+
+td{
+  margin:0px;
+}
+
+th{
+  margin:0px;
+}
+}
+
 
 /* Sidebar */
 .sidebar {
@@ -142,9 +137,7 @@
 
 nav#sidebarMenu{
   width:200px;
-  box-shadow: none;
 }
-
 
 .position-sticky {
   position: relative;
@@ -163,100 +156,13 @@ p.current{
   font-size: 1.5rem;
 }
 
-    #btn{
-         border-radius:20px;
-         background-color:#cf1b0e;
-         color: white;
-    }
-     #btn:hover{
-         color: white;
-         filter:brightness(80%)
-      }
-
-
-      /*  */
-    .update{
-        padding: .5rem 1rem;
-        background-color: #0072CE;
-        color: white;
-        border-radius: 20px;
-        margin-right: 1rem;
-    }
-
-    .update:hover{
-         color: white;
-         filter:brightness(80%)
-        
-      }
-
-      .view{
-        padding: .5rem 1.2rem;
-        background-color: orange;
-        color: white;
-        border-radius: 20px;
-        margin-right: 1rem;
-    }
-
-    .view:hover{
-         color: white;
-         filter:brightness(80%)
-    
-      }
-
-
-      table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
-	
-	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr{ 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	
-	tr { border: 1px solid #ccc; }
-	
-	td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
-	}
-	
-	td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-		white-space: nowrap;
-	}
-
-
-  table { 
-  width: 100%; 
-  border-collapse: collapse; 
-}
-/* Zebra striping */
-tr:nth-of-type(odd) { 
-  background: #eee; 
-}
-th { 
-  background: #333; 
-  color: white; 
-  font-weight: bold; 
-}
-td, th { 
-  padding: 6px; 
-  border: 1px solid #ccc; 
-  text-align: left; 
-}
 }
 
+@media screen and (min-width: 768px) and (max-width:991px){
+#position{
+  margin-left: 10rem;
+}
+}
 @media screen and (min-width: 768px) and (max-width:991px){
 #position{
   margin-left: 10rem;
@@ -310,6 +216,8 @@ td, th {
 
 </style>
 </head>
+
+
 <body>
   <div id="app">
       <nav class="navbar navbar-expand-lg navbar-expand-md bg-light shadow">
@@ -367,93 +275,100 @@ td, th {
       </nav>
       <!-- Sidebar -->
 
-      {{-- alert --}}
-@if (Session::has('success'))
-<div class="alert alert-primary" role="alert">
-    <div class="flex">
-        <p class="text-center">{{ Session::get('success') }}</p>
-    </div>
-</div>
-@endif
 
-@if (Session::has('deleted'))
-<div class="alert alert-primary" role="alert">
-    <div class="flex">
-        <p class="text-center">{{ Session::get('deleted') }}</p>
-    </div>
-</div>
-@endif
-{{-- end alert --}}
-<div class="container" id="container">
-
-    <table class="table table-striped" id="table">
-        <thead>
-            <tr>
-                <th class="">
-                    <div class="d-flex justify-content-center">
-                        Customer ID
-                    </div>
-                </th>
-                <th class="">
-                    <div class="d-flex justify-content-center">
-                        Name
-                    </div>
-                </th>
-                <th class="">
-                  <div class="d-flex justify-content-center">
-                      Address
-                  </div>
-              </th>
-                <th class="">
-                    <div class="d-flex justify-content-center">
-                        Actions
-                    </div>
-                </th>
-            </tr>
-        </thead>
-
-        <tbody>
-            @foreach($users->reverse() as $user)
-            <tr>
-                <td>
-                    {{ $user->customerId }}
-                </td>
-                <td >{{ $user->name }}</td>
-                <td >{{ $user->address }}</td>
-                <td>
-                    <form id="form" onsubmit="return confirm('Do you really want to delete this user?');"
-                        action="{{ route('deleteuser') }}" method="post">
-
-                        {{-- check if we have delete user route --}}
-                        @csrf
-
-                      {{-- actions --}}
-
-                        <a href="{{ url('/admin/userbill/'.$user->id) }}"
-                          class="view text-decoration-none fw-bold" id="view">
-                          View
-                      </a>
-                        <a href="{{ url('/admin/userupdate/'.$user->id) }}"
-                            class="update text-decoration-none fw-bold" id="update">
-                            Update
-                        </a>
-                        <input type="hidden" name="user_id" value="{{ $user->id }}">
-                        <button type="submit"
-                            class="btn fw-bold" id="btn">
-                            Delete
-                        </button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+<section class="section">
+<div class="container mt-5 pt-5 mb-5 pb-5" >
+    <div class="row">
+        <div class="col-xs col-sm col-md-8 col-md-offset-2" id="position">
+            <div class="card shadow text-reset">
   
+
+                <div class="card-body">
+                  <div class="container-fluid">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    <fieldset class="border pb-2">
+                      <legend class="w-auto mx-3 border-0 mb-0 px-4">{{ $user->name}}</legend>
+                        <div class="container-fluid">
+                          <div class="lh-1">
+                            <dl class="d-flex w-100 my-0">
+                                <dt class="col-auto pe-2">Connection ID:</dt>
+                                <dd class="col-auto flex-shrink-1 flex-grow-1">{{ $user->customerId }}</dd>
+                            </dl>
+                            <dl class="d-flex w-100 my-0">
+                                <dt class="col-auto pe-2">Name:</dt>
+                                <dd class="col-auto flex-shrink-1 flex-grow-1">{{ $user->name }}</dd>
+                            </dl>
+                            <dl class="d-flex w-100 my-0">
+                                <dt class="col-auto pe-2">Email:</dt>
+                                <dd class="col-auto flex-shrink-1 flex-grow-1">{{ $user->email }}</dd>
+                            </dl>
+                            <dl class="d-flex w-100 my-0">
+                                <dt class="col-auto pe-2">Billing Address:</dt>
+                                <dd class="col-auto flex-shrink-1 flex-grow-1">{{ $user->address }}</dd>
+                            </dl>
+                          </div>
+                        </div>
+                    </fieldset>
+                    <div class="clear-fix"></div>
+                    <div class="row text-center">
+                      <h3 class="text-center my-2 pt-3">Pending Bill: 
+                        <span class="text-muted">&#x20B1;  @php
+                          use App\Http\Controllers\billController;
+                          echo number_format(billController::calculate($user->id));
+                          @endphp    </span>
+                      </h3>
+                    </div>
+                    <center>
+                      <hr class="bg-primary bg-opacity-100" width="40%" style="opacity: 1; height:2px my-1">
+                    </center>
+                    <div class="clear-fix"></div>
+
+
+                    <div class="clear-fix py-3"></div>
+                    <fieldset class="border pb-4">
+                      <legend class="w-auto mx-3 border-0 mb-0 px-4">Issued Bills</legend>
+                      <div class="container-fluid">
+                        <table class="table table-striped table-bordered">
+                          <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Month</th>
+                                <th scope="col">Year</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Amount</th>
+                              </tr>
+                          </thead>
+                          
+                          {{-- <tbody>
+                              @foreach($data as $value)
+                              <tr>
+                                    <td>{{$value->month}}</td>
+                                    <td>{{$value->year}}</td>
+                                    <td>{{$value->status}}</td>
+                                    <td>{{$value->amount}}</td>
+                              </tr>
+                              @endforeach
+                          </tbody> --}}
+                        
+                          </table>
+                      </div>
+                    </fieldset>
+                    <div class="clear-fix mb-3"></div>                    
+ 
+                     
+                 
+                    
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-
+</section>
 {{-- @endsection --}}
-
 
 {{-- </footer> --}}
 <div class="container-fluid shadow" style="background-color: #f1f1f1;">
@@ -513,3 +428,5 @@ td, th {
   </script>
 </body>
 </html>
+
+
