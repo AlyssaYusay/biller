@@ -115,7 +115,9 @@
     
 }
 
-
+img{
+    max-width: 100%;
+}
 .hours{
     color: #FFB20C;
 }
@@ -145,7 +147,18 @@ color: white;
     filter:brightness(80%)
 }
 
+#subscribe{
+border-radius:20px;
+background-color:#FFB20C;
+color: white;   
+}
 
+
+#subscribe:hover{
+    background-color:#FFB20C;
+    color: white;
+    filter:brightness(80%)
+}
 .image{
     position: absolute;
     bottom: 1px;
@@ -187,6 +200,11 @@ padding-bottom: 5rem;
     filter: brightness(80%)
 }
 
+
+input.form-control{
+    width: 90%;
+    margin-left:2rem;
+}
     /* media query */
     @media screen and (max-width: 480px){
     .top-right{
@@ -522,21 +540,21 @@ padding-bottom: 5rem;
     <div class="container text-center" id="box">
        <div class="row">
             
-           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
+           <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl">
                <div class="card border-dark">
                   <a href="../images/create&log.png"><img src="../images/create&log.png" height="250px" alt="" id="img"></a>
                   <p class="text mt-2">Register & Log-In your Account</p>
                </div>
             </div>
 
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
+          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl">
              <div class="card border-dark">
                <a href="../images/SelectMonth.png"><img src="../images/SelectMonth.png" height="250px" alt="" id="img"></a>
                 <p class="text mt-2">Select the Month of your Bill</p>
              </div>
           </div>
 
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
+          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl">
              <div class="card border-dark">
                <a href="../images/download.png"><img src="../images/download.png" height="223px" alt="" id="img" class="mt-2"></a>
                 <p class="text mt-4">Download the PDF File</p>
@@ -593,7 +611,7 @@ padding-bottom: 5rem;
     <h3>Subscribe to our newsletter</h3>
     <p>Get latest news from Meralca</p>
     
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="">
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal" id="">
       Subscribe
     </button>
   </div>
@@ -614,14 +632,17 @@ padding-bottom: 5rem;
         <div class="modal-body">
             Get latest news from Meralca
         </div>
-  <div>
-    <input type="text" class="form-control" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="subscribe" class="">
-    <button class="btn btn-success border-rad" type="button" id="subscribe">Subscribe</button>
-    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="row">
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-8 col-xxl">
+    <input type="text" class="form-control" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="subscribe" class="" width="80%">
   </div>
+  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl">
+    <button class="btn" type="button" id="subscribe"class="btn-close" data-bs-dismiss="modal">Subscribe</button>
+  </div>
+        </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
         </div>
   
       </div>
