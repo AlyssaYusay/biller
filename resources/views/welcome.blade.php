@@ -550,17 +550,57 @@ padding-bottom: 5rem;
                     
                 </div>
                 <div class="col-lg-4">
-                <form action="../send.php" method="post">
-                        <h3>Subscribe to our newsletter</h3>
+            
+{{-- modal --}}
+<div class="container mt-3">
+    <h3>Subscribe to our newsletter</h3>
+    <p>Get latest news from Meralca</p>
+    
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="">
+      Subscribe
+    </button>
+  </div>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h3 class="modal-title">Subscribe to our newsletter</h3>
+          <br>
+         
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            Get latest news from Meralca
+        </div>
+  <div>
+    <input type="text" class="form-control" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="subscribe" class="">
+    <button class="btn btn-success border-rad" type="button" id="subscribe">Subscribe</button>
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+{{-- modal --}}
+                        {{-- <h3>Subscribe to our newsletter</h3>
                         <p>Get latest news from Meralca</p>
                         <div class="d-flex w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
                             <input id="newsletter1" type="text" class="form-control me-2 "  name="emailadd"
                                 placeholder="Email address">
-                            <button type="submit" class="btn btn-md" name="subscribeExpl">Subscribe</button>
+                            <button type="button" class="btn btn-md" name="subscribeExpl" id="subscribe">Subscribe</button>
                             
-                        </div>
-                    </form>
+                        </div> --}}
+                    
                 </div>
             </div>
             <hr>
@@ -570,7 +610,32 @@ padding-bottom: 5rem;
         </footer>
 
                         
-                        
+ <script type="text/javascript">
+  (function () {
+  emailjs.init('6JbWmxI3drDtjR65l'); //please encrypted user id for malicious attacks
+  })();
+         </script>
+<script>
+
+
+  emailjs.send("service_w09xyou", "template_9oqwaen", templateParams).then(
+    function (response) {
+      console.log("SUCCESS!", response.status, response.text);
+      alert(placeorder);
+      localStorage.clear();
+      location.href = "index.html";
+    },
+    function (error) {
+      console.log("FAILED...", error);
+    }
+  );
+
+
+
+let subscribe = document.getElementById("subscribe");
+subscribe.addEventListener("click", Subscribe);
+</script>
+
  <script type='text/javascript'>
     (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'NnapDrn32MoApNs2t_c', {});
 </script>

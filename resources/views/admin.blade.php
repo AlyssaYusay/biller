@@ -182,7 +182,7 @@ p.current{
                             </select>
                           </div>
                         </div>
-
+                        {{-- <div class="alert-danger">{{$errors->distinct('bills')}}</div> --}}
                         <!-- Button -->
                         <div class="mb-3">
                           <div class="d-grid">
