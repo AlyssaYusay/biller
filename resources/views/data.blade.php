@@ -320,14 +320,14 @@ td, th {
                       MERALCA
                   </a>
                   
-                  <!-- Collapsed Hamburger -->
+                  {{-- sidebar menu --}}
                   <button
                   class="navbar-toggler text-dark ms-auto"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#navmenu"
+                  data-bs-target="#sidebarMenu"
                >
-                  <i class="fa-solid fa-bars"></i>
+               <i class="fa-solid fa-bars-staggered"></i>
                </button>
 
                  
