@@ -65,6 +65,8 @@ Route::post('updateuser',
 [UserController::class, 'update']
 )->name('updateuser');
 
+Route::get('/admin/userbill/{id}', 'UserBillController@show')->name('userbill');
+
 Route::get('/admin/userbill/{id}', function($id) {
     return view('userbill')->with('user', User::find($id));
 })->name('userbill');
