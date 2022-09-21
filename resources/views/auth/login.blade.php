@@ -10,7 +10,7 @@ body>#app{
     justify-content: center;
     background-color: white;
     color: black;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
     font-weight: 700;
     height: 100vh;
     background-size: cover;
