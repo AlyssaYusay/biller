@@ -321,9 +321,9 @@ padding-bottom: 10rem;
                         <div class="container" id="register_container">
                             <div class="col-xs-8 col-sm col-md col-lg col-xl-10 col-xxl-10">
                                 <div class="card shadow text-reset">
-                                    <div class="card-header">
+                                    <!-- <div class="card-header">
                                         <div class="card-title h3 my-2 text-center fw-bolder">Register</div>
-                                    </div>
+                                    </div> -->
                         
                                     <div class="card-body">
                                         <div class="container-fluid">

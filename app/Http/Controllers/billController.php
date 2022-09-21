@@ -7,6 +7,7 @@ use App\Bill;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Request as Irequest;
 use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\PDF;
 use PDF;
 
 class billController extends Controller

@@ -41,11 +41,23 @@
     .update:hover{
          color: white;
          filter:brightness(80%)
-         text-decoration: none;
+        
       }
 
+      .view{
+        padding: .8rem 1.2rem;
+        background-color: orange;
+        color: white;
+        border-radius: 20px;
+        margin-right: 1rem;
+    }
 
-    form{
+    .view:hover{
+         color: white;
+         filter:brightness(80%)
+    
+      }
+    #form{
         display: flex;
         justify-content: center;
       }
@@ -96,6 +108,98 @@ p.current{
   font-size: 1.5rem;
 }
 
+    #btn{
+         border-radius:20px;
+         background-color:#cf1b0e;
+         color: white;
+    }
+     #btn:hover{
+         color: white;
+         filter:brightness(80%)
+      }
+
+
+      /*  */
+    .update{
+        padding: .5rem 1rem;
+        background-color: #0072CE;
+        color: white;
+        border-radius: 20px;
+        margin-right: 1rem;
+    }
+
+    .update:hover{
+         color: white;
+         filter:brightness(80%)
+        
+      }
+
+      .view{
+        padding: .5rem 1.2rem;
+        background-color: orange;
+        color: white;
+        border-radius: 20px;
+        margin-right: 1rem;
+    }
+
+    .view:hover{
+         color: white;
+         filter:brightness(80%)
+    
+      }
+
+
+      table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr{ 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+
+
+  table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
 }
 
 @media screen and (min-width: 768px) and (max-width:991px){
@@ -120,9 +224,9 @@ p.current{
             <a href="{{url('/admin/data')}}" class="list-group-item list-group-item-action py-2 ripple"
             ><i class="fas fa-users fa-fw me-3"></i><span>Customers</span></a
           >
-            <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+            {{-- <a href="#" class="list-group-item list-group-item-action py-2 ripple"
               ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Bills</span></a
-            >
+            > --}}
           </div>
         </div>
       </nav>
@@ -152,7 +256,7 @@ p.current{
             <tr>
                 <th class="">
                     <div class="d-flex justify-content-center">
-                        Customer Id
+                        Customer ID
                     </div>
                 </th>
                 <th class="">
@@ -160,7 +264,11 @@ p.current{
                         Name
                     </div>
                 </th>
-        
+                <th class="">
+                  <div class="d-flex justify-content-center">
+                      Address
+                  </div>
+              </th>
                 <th class="">
                     <div class="d-flex justify-content-center">
                         Actions
@@ -172,20 +280,26 @@ p.current{
         <tbody>
             @foreach($users->reverse() as $user)
             <tr>
-                <td class="font-medium text-gray-900 whitespace-nowrap">
+                <td>
                     {{ $user->customerId }}
                 </td>
-                <td class="text-gray-700 whitespace-nowrap">{{ $user->name }}</td>
- 
+                <td >{{ $user->name }}</td>
+                <td >{{ $user->address }}</td>
                 <td>
-                    <form onsubmit="return confirm('Do you really want to delete this user?');"
+                    <form id="form" onsubmit="return confirm('Do you really want to delete this user?');"
                         action="{{ route('deleteuser') }}" method="post">
 
                         {{-- check if we have delete user route --}}
                         @csrf
-                       
+
+                      {{-- actions --}}
+
+                        <a href="{{ url('/admin/userbill/'.$user->id) }}"
+                          class="view text-decoration-none fw-bold" id="view">
+                          View
+                      </a>
                         <a href="{{ url('/admin/userupdate/'.$user->id) }}"
-                            class="update text-decoration-none fw-bold">
+                            class="update text-decoration-none fw-bold" id="update">
                             Update
                         </a>
                         <input type="hidden" name="user_id" value="{{ $user->id }}">

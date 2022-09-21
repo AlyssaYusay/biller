@@ -56,9 +56,9 @@ body>#app>.container{
 <div class="container">
     <div class="col-lg-5 col-md-6 col-sm-10 col-xs-12">
         <div class="card shadow text-reset">
-            <div class="card-header">
+            <!-- <div class="card-header">
                 <div class="card-title h3 my-2 text-center fw-bolder">User Login</div>
-            </div>
+            </div> -->
 
             <div class="card-body">
                 <div class="container-fluid">
