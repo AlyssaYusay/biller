@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Bill;
+use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,10 +24,13 @@ class UserBillController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    
+
+    public function show()
     {
-        $s=Auth::user()->customerId;
-        $data['data']=DB::table('bills')->where('customerId',$s)->get();
+        // $s=Auth::user()->customerId;
+        $data['data']=DB::table('bills')->where('customerId')->get();
         return view('userbill',$data);
     }
 }

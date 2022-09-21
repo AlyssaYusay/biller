@@ -39,7 +39,7 @@
     background-color: #0072CE;
     background-image: url("../images/online-payments.png");
     color: black;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
     font-weight: 600;
     height: 100vh;
     background-size: contain;
@@ -155,7 +155,12 @@ color: white;
 
 
 .list{
-padding-top: 10rem;
+padding-top: 5rem;
+padding-bottom: 3rem;
+}
+
+.list2{
+padding-top: 2rem;
 padding-bottom: 10rem;
 }
 
@@ -472,9 +477,7 @@ padding-bottom: 5rem;
     </div>
 </section>
 
-
-
-<section class="list">
+ <section class="list">
     <h1 class="text-center text-dark mb-5">Have the power to access your Meralca account wherever, whenever with</h1>
     <div class="container text-center" id="box">
        <div class="row">
@@ -512,6 +515,40 @@ padding-bottom: 5rem;
        </div>
     </div>
  </section>
+
+ <section class="list2">
+    <h1 class="text-center text-dark mb-5">Steps to Access your Bill</h1>
+    <div class="container text-center" id="box">
+    <div class="container text-center" id="box">
+       <div class="row">
+            
+           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
+               <div class="card border-dark">
+                  <a href="../images/create&log.png"><img src="../images/create&log.png" height="250px" alt="" id="img"></a>
+                  <p class="text mt-2">Register & Log-In your Account</p>
+               </div>
+            </div>
+
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
+             <div class="card border-dark">
+               <a href="../images/SelectMonth.png"><img src="../images/SelectMonth.png" height="250px" alt="" id="img"></a>
+                <p class="text mt-2">Select the Month of your Bill</p>
+             </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl">
+             <div class="card border-dark">
+               <a href="../images/download.png"><img src="../images/download.png" height="223px" alt="" id="img" class="mt-2"></a>
+                <p class="text mt-4">Download the PDF File</p>
+             </div>
+          </div>
+        </div>
+
+
+       </div>
+    </div>
+ </section>
+
 
 
 
