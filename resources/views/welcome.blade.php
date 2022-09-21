@@ -147,6 +147,19 @@ color: white;
     filter:brightness(80%)
 }
 
+
+#close-btn{
+    border-radius: 20px;
+    padding: .5rem 1.5rem;
+    border: none;
+    background-color:#0072CE;
+    color: white;
+}
+
+#close-btn:hover{
+    color: white;
+    filter:brightness(80%)
+}
 #subscribe{
 border-radius:20px;
 background-color:#FFB20C;
@@ -248,6 +261,11 @@ input.form-control{
         align-content: center;
 
     }
+
+
+.modal{
+    border-radius: 20px;
+}
 }
 
 
@@ -361,6 +379,8 @@ input.form-control{
 
     }
 }
+
+
     </style>
  
     </head>
@@ -496,7 +516,7 @@ input.form-control{
 </section>
 
  <section class="list">
-    <h1 class="text-center text-dark mb-5">Have the power to access your Meralca account wherever, whenever with</h1>
+    <h1 class="text-center text-dark mt-5 mb-5">Have the power to access your Meralca account wherever, whenever with</h1>
     <div class="container text-center" id="box">
        <div class="row">
             
@@ -540,22 +560,22 @@ input.form-control{
     <div class="container text-center" id="box">
        <div class="row">
             
-           <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl">
-               <div class="card border-dark">
+           <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl mb-3">
+               <div class="card border-dark shadow">
                   <a href="../images/create&log.png"><img src="../images/create&log.png" height="250px" alt="" id="img"></a>
                   <p class="text mt-2">Register & Log-In your Account</p>
                </div>
             </div>
 
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl">
-             <div class="card border-dark">
+          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl mb-3">
+             <div class="card border-dark shadow">
                <a href="../images/SelectMonth.png"><img src="../images/SelectMonth.png" height="250px" alt="" id="img"></a>
                 <p class="text mt-2">Select the Month of your Bill</p>
              </div>
           </div>
 
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl">
-             <div class="card border-dark">
+          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl mb-3">
+             <div class="card border-dark shadow">
                <a href="../images/download.png"><img src="../images/download.png" height="223px" alt="" id="img" class="mt-2"></a>
                 <p class="text mt-4">Download the PDF File</p>
              </div>
@@ -611,7 +631,7 @@ input.form-control{
     <h3>Subscribe to our newsletter</h3>
     <p>Get latest news from Meralca</p>
     
-    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal" id="">
+    <button type="button" class="btn shadow" data-bs-toggle="modal" data-bs-target="#myModal" id="">
       Subscribe
     </button>
   </div>
@@ -627,39 +647,36 @@ input.form-control{
           <br>
          
         </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-            Get latest news from Meralca
+   <!-- Modal body -->
+ <div class="modal-body">
+    Get latest news from Meralca
+</div>
+<div class="container">
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl">
+<input type="text" class="form-control" id="name" placeholder="Enter Name"/>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl">
+<input type="text" class="form-control" placeholder="Enter email" id="email" width="80%">
+</div>
+
+</div>
+<!-- Modal footer -->
+<div class="modal-footer">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl">
+        <button class="btn" type="submit" id="subscribe" data-bs-dismiss="modal" onclick="SendMail()">Subscribe</button>
         </div>
-        <div class="row">
-  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-8 col-xxl">
-    <input type="text" class="form-control" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="subscribe" class="" width="80%">
-  </div>
-  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl">
-    <button class="btn" type="button" id="subscribe"class="btn-close" data-bs-dismiss="modal">Subscribe</button>
-  </div>
-        </div>
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-        </div>
-  
-      </div>
-    </div>
-  </div>
+  <button type="button"id="close-btn" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
 {{-- modal --}}
-                        {{-- <h3>Subscribe to our newsletter</h3>
-                        <p>Get latest news from Meralca</p>
-                        <div class="d-flex w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control me-2 "  name="emailadd"
-                                placeholder="Email address">
-                            <button type="button" class="btn btn-md" name="subscribeExpl" id="subscribe">Subscribe</button>
-                            
-                        </div> --}}
+
+                      
                     
-                </div>
+                
             </div>
             <hr>
             <div class="text-center">
@@ -667,33 +684,31 @@ input.form-control{
             </div>
         </footer>
 
-                        
- <script type="text/javascript">
-  (function () {
-  emailjs.init('6JbWmxI3drDtjR65l'); //please encrypted user id for malicious attacks
-  })();
-         </script>
-<script>
-
-
-  emailjs.send("service_w09xyou", "template_9oqwaen", templateParams).then(
-    function (response) {
-      console.log("SUCCESS!", response.status, response.text);
-      alert(placeorder);
-      localStorage.clear();
-      location.href = "index.html";
-    },
-    function (error) {
-      console.log("FAILED...", error);
-    }
-  );
+  
 
 
 
-let subscribe = document.getElementById("subscribe");
-subscribe.addEventListener("click", Subscribe);
-</script>
-
+        
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js'></script>
+<script type='text/javascript'>
+(function(){
+ emailjs.init('IvDhY05IjehfODZVZ');
+ })();
+ </script>     
+ 
+<script type="text/javascript">
+function SendMail(){
+    var templateParams = {
+    from_name: document.getElementById("name").value,
+    email_id: document.getElementById("email").value
+}
+emailjs.send("service_kvkjf7p", "template_meralca1", templateParams).then(
+      function (response) {
+        alert("Thanks for subscribing!", response.status);
+      })
+}
+   
+  </script>
  <script type='text/javascript'>
     (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'NnapDrn32MoApNs2t_c', {});
 </script>

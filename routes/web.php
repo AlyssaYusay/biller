@@ -52,6 +52,7 @@ Route::get('/admin/data', function () {
     return view('data')->with('users', User::all());
 })->name('data');
 
+
 Route::get('/admin/userupdate/{id}', function($id) {
     return view('userupdate')->with('user', User::find($id));
 })->name('userupdate');
@@ -65,7 +66,10 @@ Route::post('updateuser',
 [UserController::class, 'update']
 )->name('updateuser');
 
-Route::get('/admin/userbill/{id}', 'UserBillController@show')->name('userbill');
+// Route::get('/admin/userbill/{id}', 'UserBillController@show')->name('userbill');
+Route::post('/admin/userbill/{id}',
+[UserBillController::class, 'create']
+)->name('userbill');
 
 Route::get('/admin/userbill/{id}', function($id) {
     return view('userbill')->with('user', User::find($id));
