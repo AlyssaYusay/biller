@@ -86,7 +86,7 @@
     /* -webkit-text-stroke: 1px blue; */
     /* -webkit-text-fill-color: white; */
     /* text-shadow: 0px 1px 4px #23430C; */
-    margin-top:10.5rem;
+    margin-top:8.5rem;
 }
 
 .links > a {
@@ -181,7 +181,7 @@ padding-bottom: 10rem;
     .title{
         font-size: 3.5rem;
         margin-top:18rem;
-        padding-top: 10rem;
+        padding-top: 8rem;
     }
     
     .column.iconify{
@@ -215,7 +215,7 @@ padding-bottom: 10rem;
     .title{
         font-size: 3.5rem;
         margin-top:18rem;
-        padding-top: 10rem;
+        padding-top: 8rem;
     }
     
     .column.iconify{
@@ -241,7 +241,7 @@ padding-bottom: 10rem;
     .title{
         font-size: 3.5rem;
         margin-top:10rem;
-        padding-top: 12rem;
+        padding-top: 8rem;
     }
     
     .column.iconify{
