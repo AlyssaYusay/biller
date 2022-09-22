@@ -625,7 +625,7 @@ input.form-control{
 <h1 class="text-light">Trusted Electricians, Home Advisor Approved</h1>
 </div>
 <div class="col-xs col-sm col-md col-lg col-xl-4 col-xxl-4 text-center mt-2" id="request-button">
-<a href="#" class="request-button fw-bold shadow">Request Quote Now</a> 
+<a href="{{url('/contactus')}}" class="request-button fw-bold shadow">Request Quote Now</a> 
 </div>
 </div>
 </div>
