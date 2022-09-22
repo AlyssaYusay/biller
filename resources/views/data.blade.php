@@ -429,10 +429,10 @@ td, th {
 
                       {{-- actions --}}
 
-                        {{-- <a href="{{ url('/admin/userbill/'.$user->id) }}"
+                        <a href="{{ url('/admin/userbill/') }}"
                           class="view text-decoration-none fw-bold" id="view">
                           View
-                      </a> --}}
+                      </a>
                         <a href="{{ url('/admin/userupdate/'.$user->id) }}"
                             class="update text-decoration-none fw-bold" id="update">
                             Update

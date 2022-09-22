@@ -234,6 +234,8 @@ padding-bottom: 5rem;
 #myBtn:hover {
   filter: brightness(80%)
 }
+
+
 input.form-control{
     width: 90%;
     margin-left:2rem;
@@ -287,6 +289,7 @@ input.form-control{
     border-radius: 20px;
 }
 }
+
 
 
 @media screen and (min-width: 481px) and (max-width:575px){
@@ -405,7 +408,7 @@ input.form-control{
  
     </head>
  <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="iconify" data-icon="bytesize:arrow-top" style="color: white;"></span></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="iconify" data-icon="bytesize:arrow-top" style="color: white;" id="icon"></span></button>
 <section class="hero-section">
 
         <div class="flex-center position-ref full-height">

@@ -67,13 +67,23 @@ Route::post('updateuser',
 )->name('updateuser');
 
 // Route::get('/admin/userbill/{id}', 'UserBillController@show')->name('userbill');
-Route::post('/admin/userbill/{id}',
-[UserBillController::class, 'create']
-)->name('userbill');
+// Route::post('/admin/userbill/{id}',
+// [UserBillController::class, 'create']
+// )->name('userbill');
 
-Route::get('/admin/userbill/{id}', function($id) {
-    return view('userbill')->with('user', User::find($id));
-})->name('userbill');
+Route::get('/admin/userbill/', 'UserBillController@data')->name('userbill');
+// Route::get('/admin/userbill/{id}', function($id) {
+//     return view('userbill')->with('user', User::find($id));
+// })->name('userbill');
+
+// use App\Http\Controllers\UserBillController;
+ 
+// Route::controller(UserBillController::class)->group(function () {
+//     Route::get('/admin/userbill/{id}', 'data');
+//     ;
+// });
+
+
 
 Route::post('/admin/store','billController@store')->name('admin.store');
 Route::post('/admin/updaterate','billController@updaterate')->name('admin.updaterate');

@@ -283,7 +283,7 @@ p.current{
             <div class="card shadow text-reset">
   
 
-                <div class="card-body">
+                {{-- <div class="card-body">
                   <div class="container-fluid">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -325,7 +325,7 @@ p.current{
                     <center>
                       <hr class="bg-primary bg-opacity-100" width="40%" style="opacity: 1; height:2px my-1">
                     </center>
-                    <div class="clear-fix"></div>
+                    <div class="clear-fix"></div> --}}
 
 
                     <div class="clear-fix py-3"></div>
@@ -342,7 +342,7 @@ p.current{
                               </tr>
                           </thead>
                           
-                          {{-- <tbody>
+                          <tbody>
                               @foreach($data as $value)
                               <tr>
                                     <td>{{$value->month}}</td>
@@ -351,7 +351,7 @@ p.current{
                                     <td>{{$value->amount}}</td>
                               </tr>
                               @endforeach
-                          </tbody> --}}
+                          </tbody>
                         
                           </table>
                       </div>

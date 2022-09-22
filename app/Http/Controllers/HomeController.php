@@ -25,7 +25,7 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
         $s=Auth::user()->customerId;
         $data['data']=DB::table('bills')->where('customerId',$s)->get();
         return view('home',$data);
