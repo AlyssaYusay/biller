@@ -122,7 +122,10 @@ img{
     color: #FFB20C;
 }
 
-
+.contact{
+    text-decoration: none;
+    color:black;
+}
 body>#app>.container{
 flex-shrink: 1;
 flex-grow: 1;
@@ -636,7 +639,7 @@ input.form-control{
         <footer class="container py-5" id="footer">
             <div class="row text-dark" id="footer-row">
                 <div class="col-lg-3">
-                    <h3>Contact Us:</h3>
+                    <a href="{{url('/contactus')}}" class="contact"><h3>Contact Us:</h3></a>
                        <p>0009-001-0123</p>
                     <h3>Email:</h3>
                    <p>meralca.support@help.com</p>

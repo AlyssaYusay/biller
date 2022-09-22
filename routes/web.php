@@ -89,7 +89,9 @@ Route::post('/admin/store','billController@store')->name('admin.store');
 Route::post('/admin/updaterate','billController@updaterate')->name('admin.updaterate');
 
 
-
+Route::get('/contactus',function(){
+	return view('contact');
+});
 // admin
 // Route::middleware(['auth', 'AdminMiddleware'])->group(function () {
 
