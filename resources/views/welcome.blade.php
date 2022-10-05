@@ -240,8 +240,8 @@ padding-bottom: 5rem;
 
 
 input.form-control{
-    width: 90%;
-    margin-left:2rem;
+    width: 100%;
+    /* margin-left:2rem; */
 }
     /* media query */
     @media screen and (max-width: 480px){
